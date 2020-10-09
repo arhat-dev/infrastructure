@@ -1,0 +1,25 @@
+name: CI
+
+# yamllint disable-line rule:truthy
+on:
+  check_run:
+    types:
+    - rerequested
+    - requested_action
+  pull_request:
+    branches:
+    - master
+  push:
+    branches:
+    - master
+    tags:
+    - v*
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Lint
+      run: |
+        make lint.all
