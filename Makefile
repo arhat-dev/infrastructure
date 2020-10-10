@@ -13,3 +13,15 @@
 # limitations under the License.
 
 include scripts/lint.mk
+
+HELM_STACK := $(shell command -v helm-stack)
+CLUSTER_NAME ?= all
+
+ensure:
+	${HELM_STACK} ensure
+
+gen:
+	${HELM_STACK} gen ${CLUSTER_NAME}
+
+clean:
+	${HELM_STACK} clean

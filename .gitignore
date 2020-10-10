@@ -4,3 +4,9 @@
 /build
 
 *coverage*
+
+# ignore pulled charts
+/charts
+
+# do not ignore temporary charts created locally
+!/charts/example-local-chart/latest
