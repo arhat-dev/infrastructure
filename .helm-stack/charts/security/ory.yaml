@@ -1,4 +1,5 @@
 repos:
+# https://github.com/ory/k8s
 - name: ory
   url: https://k8s.ory.sh/helm/charts
 

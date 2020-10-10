@@ -1,4 +1,5 @@
 repos:
+# https://github.com/sonatype/helm3-charts
 - name: sonatype
   url: https://sonatype.github.io/helm3-charts
 

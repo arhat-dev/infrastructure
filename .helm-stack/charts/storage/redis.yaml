@@ -1,4 +1,5 @@
 repos:
+# https://github.com/softonic/redis-sharded-chart
 - name: softonic
   url: https://charts.softonic.io
 

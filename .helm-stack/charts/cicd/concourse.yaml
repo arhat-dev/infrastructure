@@ -1,4 +1,5 @@
 repos:
+# https://github.com/concourse/concourse-chart
 - name: concourse
   url: https://concourse-charts.storage.googleapis.com
 

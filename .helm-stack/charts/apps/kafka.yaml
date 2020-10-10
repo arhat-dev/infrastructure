@@ -1,4 +1,5 @@
 repos:
+# https://github.com/strimzi/strimzi.github.io
 - name: strimzi
   url: https://strimzi.io/charts
 

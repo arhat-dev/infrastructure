@@ -1,4 +1,5 @@
 repos:
+# https://github.com/vmware-tanzu/helm-charts
 - name: vmware-tanzu
   url: https://vmware-tanzu.github.io/helm-charts
 
