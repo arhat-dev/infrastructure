@@ -1,0 +1,13 @@
+repos:
+# https://github.com/aquasecurity/aqua-helm
+- name: aqua-helm
+  url: https://helm.aquasec.com
+
+charts:
+- name: aqua-helm/enforcer@5.3.0
+- name: aqua-helm/scanner@5.3.0
+- name: aqua-helm/server@5.3.0
+- name: aqua-helm/kube-enforcer@5.0
+  git:
+    url: https://github.com/aquasecurity/aqua-helm
+    path: kube-enforcer
