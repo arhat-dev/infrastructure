@@ -31,9 +31,9 @@ _run_helm_stack() {
 
   container_path_env="/opt/helm/${HELM_VERSION:-"v3"}:/opt/kube/${KUBERNETES_VERSION:-"v1.18"}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   docker run -t --rm -v "$(pwd):$(pwd)" -w "$(pwd)" \
-	    -e PATH="${container_path_env}" --entrypoint /bin/sh \
-      arhatdev/helm-stack:latest \
-      -c "/helm-stack $*"
+    -e PATH="${container_path_env}" --entrypoint /bin/sh \
+    arhatdev/helm-stack:latest \
+    -c "/helm-stack $*"
 }
 
 run() {
