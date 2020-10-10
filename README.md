@@ -29,6 +29,7 @@ Create a private repo with this template to avoid any credential leak.
 2. Update cluster deployments in [`.helm-stack.yaml`](./.helm-stack.yaml)
    - Usually you should not change the deployment name
 3. Run `helm-stack ensure` to make sure everything up to date
+   - DO NOT CHANGE anything in values files at this step
 
 ## LICENSE
 
