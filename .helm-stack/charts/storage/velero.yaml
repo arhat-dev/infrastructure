@@ -1,0 +1,6 @@
+repos:
+- name: vmware-tanzu
+  url: https://vmware-tanzu.github.io/helm-charts
+
+charts:
+- name: vmware-tanzu/velero@2.13.3

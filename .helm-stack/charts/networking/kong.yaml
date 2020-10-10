@@ -1,0 +1,8 @@
+repos:
+# https://github.com/Kong/charts
+- name: kong
+  url: https://charts.konghq.com
+
+charts:
+- name: kong/kong@1.11.0
+- name: bitnami/kong@1.3.8

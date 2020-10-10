@@ -1,0 +1,7 @@
+repos:
+- name: sonatype
+  url: https://sonatype.github.io/helm3-charts
+
+charts:
+- name: sonatype/nexus-repository-manager@28.0.1
+- name: sonatype/nexus-iq-server@99.0.0

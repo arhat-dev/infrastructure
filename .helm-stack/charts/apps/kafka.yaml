@@ -1,0 +1,7 @@
+repos:
+- name: strimzi
+  url: https://strimzi.io/charts
+
+charts:
+- name: strimzi/strimzi-kafka-operator@0.19.0
+- name: bitnami/kafka@11.8.6

@@ -1,0 +1,3 @@
+app:
+  chartsDir: charts
+  environmentsDir: clusters

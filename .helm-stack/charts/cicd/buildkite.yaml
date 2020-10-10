@@ -1,0 +1,6 @@
+repos:
+- name: buildkite
+  url: https://buildkite.github.io/charts
+
+charts:
+- name: buildkite/agent@0.4.6

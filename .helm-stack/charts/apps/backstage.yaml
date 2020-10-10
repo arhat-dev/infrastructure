@@ -1,0 +1,5 @@
+charts:
+- name: spotify/backstage@v0.1.1-alpha.24
+  git:
+    url: https://github.com/spotify/backstage
+    path: contrib/kubernetes/basic_kubernetes_example_with_helm/backstage

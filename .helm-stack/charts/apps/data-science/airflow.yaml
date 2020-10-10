@@ -1,0 +1,8 @@
+repos:
+# https://github.com/astronomer/airflow-chart
+- name: astronomer
+  url: https://helm.astronomer.io
+
+charts:
+- name: astronomer/airflow@0.17.1
+- name: bitnami/airflow@6.6.1

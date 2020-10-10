@@ -1,0 +1,2 @@
+charts:
+- name: k8s-at-home/intel-gpu-plugin@1.0.0

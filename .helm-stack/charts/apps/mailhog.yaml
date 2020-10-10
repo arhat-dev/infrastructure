@@ -1,0 +1,2 @@
+charts:
+- name: codecentric/mailhog@3.2.1

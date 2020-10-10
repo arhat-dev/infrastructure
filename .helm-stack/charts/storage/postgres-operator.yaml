@@ -1,0 +1,10 @@
+charts:
+- name: zalando/postgres-operator@v1.5.0
+  git:
+    url: https://github.com/zalando/postgres-operator
+    path: charts/postgres-operator
+
+- name: zalando/postgres-operator-ui@v1.5.0
+  git:
+    url: https://github.com/zalando/postgres-operator
+    path: charts/postgres-operator-ui

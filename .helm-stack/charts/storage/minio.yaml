@@ -1,0 +1,8 @@
+repos:
+# https://github.com/minio/charts
+- name: minio
+  url: https://helm.min.io
+
+charts:
+- name: minio/minio@7.1.2
+- name: bitnami/minio@3.7.11

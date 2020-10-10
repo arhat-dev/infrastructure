@@ -1,0 +1,2 @@
+charts:
+- name: cetic/mlflow@1.4.0

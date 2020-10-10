@@ -1,0 +1,7 @@
+repos:
+# https://github.com/haproxytech/helm-charts
+- name: haproxytech
+  url: https://haproxytech.github.io/helm-charts
+
+charts:
+- name: haproxytech/kubernetes-ingress@1.6.2

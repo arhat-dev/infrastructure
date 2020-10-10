@@ -1,0 +1,2 @@
+charts:
+- name: k8s-at-home/frigate@4.0.1

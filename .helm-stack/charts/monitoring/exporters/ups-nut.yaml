@@ -1,0 +1,2 @@
+charts:
+- name: k8s-at-home/prometheus-nut-exporter@1.0.1

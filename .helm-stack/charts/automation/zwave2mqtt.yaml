@@ -1,0 +1,2 @@
+charts:
+- name: k8s-at-home/zwave2mqtt@3.0.1

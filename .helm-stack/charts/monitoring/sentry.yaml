@@ -1,0 +1,8 @@
+repos:
+# https://github.com/sentry-kubernetes/charts
+- name: sentry
+  url: https://sentry-kubernetes.github.io/charts
+
+charts:
+- name: sentry/sentry-kubernetes@0.3.1
+- name: stable/sentry@4.3.0

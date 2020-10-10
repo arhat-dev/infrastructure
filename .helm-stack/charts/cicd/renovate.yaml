@@ -1,0 +1,6 @@
+repos:
+- name: renovate
+  url: https://docs.renovatebot.com/helm-charts
+
+charts:
+- name: renovate/renovate@23.44.4

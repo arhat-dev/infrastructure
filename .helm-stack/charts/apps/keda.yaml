@@ -1,0 +1,7 @@
+repos:
+# https://github.com/kedacore/charts
+- name: kedacore
+  url: https://kedacore.github.io/charts
+
+charts:
+- name: kedacore/keda@2.0.0-rc

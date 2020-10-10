@@ -1,0 +1,6 @@
+repos:
+- name: concourse
+  url: https://concourse-charts.storage.googleapis.com
+
+charts:
+- name: concourse/concourse@14.0.1

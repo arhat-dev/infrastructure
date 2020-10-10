@@ -1,0 +1,2 @@
+charts:
+- name: prometheus-community/prometheus-couchdb-exporter@0.1.2

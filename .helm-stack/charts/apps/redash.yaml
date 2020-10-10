@@ -1,0 +1,7 @@
+repos:
+# https://github.com/getredash/contrib-helm-chart
+- name: redash
+  url: https://getredash.github.io/contrib-helm-chart
+
+charts:
+- name: redash/redash@2.0.0

@@ -1,0 +1,2 @@
+charts:
+- name: prometheus-community/prometheus-mongodb-exporter@2.8.1

@@ -1,0 +1,8 @@
+repos:
+- name: nats
+  url: https://nats-io.github.io/k8s/helm/charts
+
+charts:
+- name: nats/nats@0.6.0
+- name: nats/stan@0.6.0
+- name: bitnami/nats@4.5.6

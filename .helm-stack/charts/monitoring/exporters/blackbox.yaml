@@ -1,0 +1,2 @@
+charts:
+- name: prometheus-community/prometheus-blackbox-exporter@4.7.0

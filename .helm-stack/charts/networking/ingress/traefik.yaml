@@ -1,0 +1,7 @@
+repos:
+# https://github.com/traefik/traefik-helm-chart
+- name: traefik
+  url: https://helm.traefik.io/traefik
+
+charts:
+- name: traefik/traefik@9.4.3

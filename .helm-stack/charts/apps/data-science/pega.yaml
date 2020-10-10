@@ -1,0 +1,8 @@
+repos:
+# https://github.com/pegasystems/pega-helm-charts
+- name: pega
+  url: https://dl.bintray.com/pegasystems/pega-helm-charts
+
+charts:
+- name: pega/pega@1.3.2
+- name: pega/addons@1.3.2

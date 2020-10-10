@@ -1,0 +1,2 @@
+charts:
+- name: bitnami/external-dns@3.4.6

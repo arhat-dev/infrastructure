@@ -1,0 +1,2 @@
+charts:
+- name: bitnami/kubewatch@1.2.5

@@ -1,0 +1,8 @@
+repos:
+# https://github.com/jaegertracing/helm-charts
+- name: jaegertracing
+  url: https://jaegertracing.github.io/helm-charts
+
+charts:
+- name: jaegertracing/jaeger@0.39.0
+- name: jaegertracing/jaeger-operator@2.17.0

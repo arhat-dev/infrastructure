@@ -1,0 +1,3 @@
+charts:
+- name: cetic/phpldapadmin@0.1.4
+- name: gabibbo97/389ds@0.1.0

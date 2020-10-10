@@ -1,0 +1,2 @@
+charts:
+- name: prometheus-community/prometheus-nats-exporter@2.5.1

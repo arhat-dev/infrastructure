@@ -1,0 +1,8 @@
+repos:
+- name: softonic
+  url: https://charts.softonic.io
+
+charts:
+- name: bitnami/redis@11.1.0
+- name: bitnami/redis-cluster@3.2.6
+- name: softonic/redis-sharded@0.3.0

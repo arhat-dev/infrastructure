@@ -1,0 +1,2 @@
+charts:
+- name: prometheus-community/prometheus-rabbitmq-exporter@0.5.6

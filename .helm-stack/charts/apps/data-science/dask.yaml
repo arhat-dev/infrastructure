@@ -1,0 +1,8 @@
+repos:
+# https://github.com/dask/helm-chart
+- name: dask
+  url: https://helm.dask.org
+
+charts:
+- name: dask/dask@4.5.1
+- name: dask/daskhub@4.5.1

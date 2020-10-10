@@ -1,0 +1,2 @@
+charts:
+- name: bitnami/odoo@14.0.20

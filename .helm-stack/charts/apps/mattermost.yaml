@@ -1,0 +1,9 @@
+repos:
+# https://github.com/mattermost/mattermost-helm
+- name: mattermost
+  url: https://helm.mattermost.com
+
+charts:
+- name: mattermost/mattermost-team-edition@3.16.0
+- name: mattermost/mattermost-enterprise-edition@1.8.0
+- name: mattermost/mattermost-push-proxy@0.5.0
