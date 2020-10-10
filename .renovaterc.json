@@ -1,9 +1,8 @@
 {
   "extends": [
-    "config:base",
-    "github>arhat-dev/renovate-presets:kubernetes-cluster"
+    "config:base"
   ],
-  "enabledManagers": ["regex"],
+  "enabledManagers": ["regex", "kubernetes"],
   "reviewers": [],
   "schedule": [
     "every weekend"
@@ -40,5 +39,424 @@
   "ignoreDeprecated": true,
   "ignoreNpmrcFile": true,
   "includeForks": false,
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "aliases": {
+    "fluent": "https://fluent.github.io/helm-charts",
+    "strimzi": "https://strimzi.io/charts",
+    "kedacore": "https://kedacore.github.io/charts",
+    "mattermost": "https://helm.mattermost.com",
+    "nats": "https://nats-io.github.io/k8s/helm/charts",
+    "redash": "https://getredash.github.io/contrib-helm-chart",
+    "astronomer": "https://helm.astronomer.io",
+    "dask": "https://helm.dask.org",
+    "jupyterhub": "https://jupyterhub.github.io/helm-chart",
+    "pega": "https://dl.bintray.com/pegasystems/pega-helm-charts",
+    "argo": "https://argoproj.github.io/argo-helm",
+    "buildkite": "https://buildkite.github.io/charts",
+    "concourse": "https://concourse-charts.storage.googleapis.com",
+    "gitlab": "https://charts.gitlab.io",
+    "harbor": "https://helm.goharbor.io",
+    "jenkins": "https://charts.jenkins.io",
+    "sonatype": "https://sonatype.github.io/helm3-charts",
+    "renovate": "https://docs.renovatebot.com/helm-charts",
+    "elastic": "https://helm.elastic.co",
+    "grafana": "https://grafana.github.io/helm-charts",
+    "influxdata": "https://helm.influxdata.com",
+    "jaegertracing": "https://jaegertracing.github.io/helm-charts",
+    "prometheus-community": "https://prometheus-community.github.io/helm-charts",
+    "sentry": "https://sentry-kubernetes.github.io/charts",
+    "kong": "https://charts.konghq.com",
+    "haproxytech": "https://haproxytech.github.io/helm-charts",
+    "ingress-nginx": "https://kubernetes.github.io/ingress-nginx",
+    "traefik": "https://helm.traefik.io/traefik",
+    "anchore": "https://charts.anchore.io",
+    "aqua-helm": "https://helm.aquasec.com",
+    "jetstack": "https://charts.jetstack.io",
+    "falcosecurity": "https://falcosecurity.github.io/charts",
+    "ory": "https://k8s.ory.sh/helm/charts",
+    "minio": "https://helm.min.io",
+    "vmware-tanzu": "https://vmware-tanzu.github.io/helm-charts",
+    "softonic": "https://charts.softonic.io",
+    "oteemocharts": "https://oteemo.github.io/charts",
+    "codecentric": "https://codecentric.github.io/helm-charts",
+    "azure-samples": "https://azure-samples.github.io/helm-charts/",
+    "cetic": "https://cetic.github.io/helm-charts",
+    "k8s-at-home": "https://k8s-at-home.com/charts",
+    "gabibbo97": "https://gabibbo97.github.io/charts",
+    "bitnami": "https://charts.bitnami.com/bitnami",
+    "stable": "https://kubernetes-charts.storage.googleapis.com"
+  },
+  "regexManagers": [
+    {
+      "fileMatch": [".+.yaml$", ".+.yml$"],
+      "matchStrings": [
+        "- name: (?<repoName>.*?)/(?<depName>.*?)@(?<currentValue>.*?)\\s"
+      ],
+      "lookupNameTemplate": "{{{repoName}}}/{{{depName}}}",
+      "datasourceTemplate": "helm",
+      "versioningTemplate": "semver"
+    }
+  ],
+  "kubernetes": {
+    "fileMatch": [".+/manifests/.+\\.yaml$", ".+/manifests-custom/.+\\.yaml$"]
+  },
+  "packageRules": [
+    {
+      "managers": ["kubernetes"],
+      "groupName": "elastic",
+      "datasources": ["docker"],
+      "packagePatterns": ["^docker.elastic.co"],
+      "registryUrls": ["docker.elastic.co"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "zalando",
+      "datasources": ["docker"],
+      "packagePatterns": ["^registry.opensource.zalan.do"],
+      "registryUrls": ["registry.opensource.zalan.do"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "gcr",
+      "datasources": ["docker"],
+      "packagePatterns": ["^gcr.io"],
+      "registryUrls": ["gcr.io"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "quay",
+      "datasources": ["docker"],
+      "packagePatterns": ["^quay.io"],
+      "registryUrls": ["quay.io"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "gitlab-registry",
+      "datasources": ["docker"],
+      "packagePatterns": ["^registry.gitlab.com"],
+      "registryUrls": ["registry.gitlab.com"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "redhat-registry",
+      "datasources": ["docker"],
+      "packagePatterns": ["^registry.access.redhat.com"],
+      "registryUrls": ["registry.access.redhat.com"]
+    },
+    {
+      "managers": ["kubernetes"],
+      "groupName": "dockerhub",
+      "datasources": ["docker"],
+      "packagePatterns": [".*"],
+      "registryUrls": ["index.docker.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^fluent/"],
+      "groupName": "fluent",
+      "registryUrls": ["https://fluent.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^strimzi/"],
+      "groupName": "strimzi",
+      "registryUrls": ["https://strimzi.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^kedacore/"],
+      "groupName": "kedacore",
+      "registryUrls": ["https://kedacore.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^mattermost/"],
+      "groupName": "mattermost",
+      "registryUrls": ["https://helm.mattermost.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^nats/"],
+      "groupName": "nats",
+      "registryUrls": ["https://nats-io.github.io/k8s/helm/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^redash/"],
+      "groupName": "redash",
+      "registryUrls": ["https://getredash.github.io/contrib-helm-chart"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^astronomer/"],
+      "groupName": "astronomer",
+      "registryUrls": ["https://helm.astronomer.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^dask/"],
+      "groupName": "dask",
+      "registryUrls": ["https://helm.dask.org"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^jupyterhub/"],
+      "groupName": "jupyterhub",
+      "registryUrls": ["https://jupyterhub.github.io/helm-chart"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^pega/"],
+      "groupName": "pega",
+      "registryUrls": ["https://dl.bintray.com/pegasystems/pega-helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^argo/"],
+      "groupName": "argo",
+      "registryUrls": ["https://argoproj.github.io/argo-helm"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^buildkite/"],
+      "groupName": "buildkite",
+      "registryUrls": ["https://buildkite.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^concourse/"],
+      "groupName": "concourse",
+      "registryUrls": ["https://concourse-charts.storage.googleapis.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^gitlab/"],
+      "groupName": "gitlab",
+      "registryUrls": ["https://charts.gitlab.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^harbor/"],
+      "groupName": "harbor",
+      "registryUrls": ["https://helm.goharbor.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^jenkins/"],
+      "groupName": "jenkins",
+      "registryUrls": ["https://charts.jenkins.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^sonatype/"],
+      "groupName": "sonatype",
+      "registryUrls": ["https://sonatype.github.io/helm3-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^renovate/"],
+      "groupName": "renovate",
+      "registryUrls": ["https://docs.renovatebot.com/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^elastic/"],
+      "groupName": "elastic",
+      "registryUrls": ["https://helm.elastic.co"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^grafana/"],
+      "groupName": "grafana",
+      "registryUrls": ["https://grafana.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^influxdata/"],
+      "groupName": "influxdata",
+      "registryUrls": ["https://helm.influxdata.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^jaegertracing/"],
+      "groupName": "jaegertracing",
+      "registryUrls": ["https://jaegertracing.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^prometheus-community/"],
+      "groupName": "prometheus-community",
+      "registryUrls": ["https://prometheus-community.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^sentry/"],
+      "groupName": "sentry",
+      "registryUrls": ["https://sentry-kubernetes.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^kong/"],
+      "groupName": "kong",
+      "registryUrls": ["https://charts.konghq.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^haproxytech/"],
+      "groupName": "haproxytech",
+      "registryUrls": ["https://haproxytech.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^ingress-nginx/"],
+      "groupName": "ingress-nginx",
+      "registryUrls": ["https://kubernetes.github.io/ingress-nginx"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^traefik/"],
+      "groupName": "traefik",
+      "registryUrls": ["https://helm.traefik.io/traefik"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^anchore/"],
+      "groupName": "anchore",
+      "registryUrls": ["https://charts.anchore.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^aqua-helm/"],
+      "groupName": "aqua-helm",
+      "registryUrls": ["https://helm.aquasec.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^jetstack/"],
+      "groupName": "jetstack",
+      "registryUrls": ["https://charts.jetstack.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^falcosecurity/"],
+      "groupName": "falcosecurity",
+      "registryUrls": ["https://falcosecurity.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^ory/"],
+      "groupName": "ory",
+      "registryUrls": ["https://k8s.ory.sh/helm/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^minio/"],
+      "groupName": "minio",
+      "registryUrls": ["https://helm.min.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^vmware-tanzu/"],
+      "groupName": "vmware-tanzu",
+      "registryUrls": ["https://vmware-tanzu.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^softonic/"],
+      "groupName": "softonic",
+      "registryUrls": ["https://charts.softonic.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^oteemocharts/"],
+      "groupName": "oteemocharts",
+      "registryUrls": ["https://oteemo.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^codecentric/"],
+      "groupName": "codecentric",
+      "registryUrls": ["https://codecentric.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^azure-samples/"],
+      "groupName": "azure-samples",
+      "registryUrls": ["https://azure-samples.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^cetic/"],
+      "groupName": "cetic",
+      "registryUrls": ["https://cetic.github.io/helm-charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^k8s-at-home/"],
+      "groupName": "k8s-at-home",
+      "registryUrls": ["https://k8s-at-home.com/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^gabibbo97/"],
+      "groupName": "gabibbo97",
+      "registryUrls": ["https://gabibbo97.github.io/charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^bitnami/"],
+      "groupName": "bitnami",
+      "registryUrls": ["https://charts.bitnami.com/bitnami"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "packagePatterns": ["^stable/"],
+      "groupName": "stable",
+      "registryUrls": ["https://kubernetes-charts.storage.googleapis.com"]
+    }
+  ]
 }
