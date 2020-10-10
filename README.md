@@ -2,12 +2,15 @@
 
 [![CI](https://github.com/arhat-dev/infrastructure/workflows/CI/badge.svg)](https://github.com/arhat-dev/infrastructure/actions?query=workflow%3ACI)
 
-Create service infrastructure on top of Kubernetes for daily development
+Create service infrastructure on top of Kubernetes for all kinds of environment
 
 ## Prerequisites
 
-- `docker` to run `helm-stack`
-- GNU `make`
+- `helm-stack` and `helm` binary installed to local PATH
+  - To install `helm-stack`, run `GOOS=$(go env GOHOSTOS) GOARCH=$(go env GOHOSTARCH) go get -u arhat.dev/helm-stack/cmd/helm-stack`
+  - To install `helm`, please refer to the [official guide](https://helm.sh/docs/intro/install/)
+  - or use `docker` to run `helm-stack` in container
+- GNU `make` (optoinal if you know how to invoke `helm-stack` correctly)
 
 ## Workflow
 
