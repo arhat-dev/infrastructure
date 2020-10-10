@@ -1,12 +1,8 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "enabledManagers": ["regex", "kubernetes"],
   "reviewers": [],
-  "schedule": [
-    "every weekend"
-  ],
+  "schedule": ["every weekend"],
   "semanticCommitType": "deps",
   "semanticCommitScope": "charts",
   "semanticCommits": "enabled",
@@ -90,9 +86,10 @@
     {
       "fileMatch": [".+.yaml$", ".+.yml$"],
       "matchStrings": [
-        "- name: (?<repoName>.*?)/(?<depName>.*?)@(?<currentValue>.*?)\\s"
+        "- name: (?<repoName>.*?)/(?<chartName>.*?)@(?<currentValue>.*?)\\s"
       ],
-      "lookupNameTemplate": "{{{repoName}}}/{{{depName}}}",
+      "depNameTemplate": "{{{chartName}}}",
+      "lookupNameTemplate": "{{{repoName}}}/{{{chartName}}}",
       "datasourceTemplate": "helm",
       "versioningTemplate": "semver"
     }
@@ -106,53 +103,61 @@
       "groupName": "elastic",
       "datasources": ["docker"],
       "packagePatterns": ["^docker.elastic.co"],
-      "registryUrls": ["docker.elastic.co"]
+      "registryUrls": ["docker.elastic.co"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "zalando",
       "datasources": ["docker"],
       "packagePatterns": ["^registry.opensource.zalan.do"],
-      "registryUrls": ["registry.opensource.zalan.do"]
+      "registryUrls": ["registry.opensource.zalan.do"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "gcr",
       "datasources": ["docker"],
       "packagePatterns": ["^gcr.io"],
-      "registryUrls": ["gcr.io"]
+      "registryUrls": ["gcr.io"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "quay",
       "datasources": ["docker"],
       "packagePatterns": ["^quay.io"],
-      "registryUrls": ["quay.io"]
+      "registryUrls": ["quay.io"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "gitlab-registry",
       "datasources": ["docker"],
       "packagePatterns": ["^registry.gitlab.com"],
-      "registryUrls": ["registry.gitlab.com"]
+      "registryUrls": ["registry.gitlab.com"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "redhat-registry",
       "datasources": ["docker"],
       "packagePatterns": ["^registry.access.redhat.com"],
-      "registryUrls": ["registry.access.redhat.com"]
+      "registryUrls": ["registry.access.redhat.com"],
+      "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
       "groupName": "dockerhub",
       "datasources": ["docker"],
       "packagePatterns": [".*"],
-      "registryUrls": ["index.docker.io"]
+      "registryUrls": ["index.docker.io"],
+      "labels": ["images"]
     },
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^fluent/"],
       "groupName": "fluent",
       "registryUrls": ["https://fluent.github.io/helm-charts"]
@@ -160,6 +165,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^strimzi/"],
       "groupName": "strimzi",
       "registryUrls": ["https://strimzi.io/charts"]
@@ -167,6 +173,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^kedacore/"],
       "groupName": "kedacore",
       "registryUrls": ["https://kedacore.github.io/charts"]
@@ -174,6 +181,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^mattermost/"],
       "groupName": "mattermost",
       "registryUrls": ["https://helm.mattermost.com"]
@@ -181,6 +189,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^nats/"],
       "groupName": "nats",
       "registryUrls": ["https://nats-io.github.io/k8s/helm/charts"]
@@ -188,6 +197,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^redash/"],
       "groupName": "redash",
       "registryUrls": ["https://getredash.github.io/contrib-helm-chart"]
@@ -195,6 +205,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^astronomer/"],
       "groupName": "astronomer",
       "registryUrls": ["https://helm.astronomer.io"]
@@ -202,6 +213,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^dask/"],
       "groupName": "dask",
       "registryUrls": ["https://helm.dask.org"]
@@ -209,6 +221,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^jupyterhub/"],
       "groupName": "jupyterhub",
       "registryUrls": ["https://jupyterhub.github.io/helm-chart"]
@@ -216,6 +229,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^pega/"],
       "groupName": "pega",
       "registryUrls": ["https://dl.bintray.com/pegasystems/pega-helm-charts"]
@@ -223,6 +237,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^argo/"],
       "groupName": "argo",
       "registryUrls": ["https://argoproj.github.io/argo-helm"]
@@ -230,6 +245,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^buildkite/"],
       "groupName": "buildkite",
       "registryUrls": ["https://buildkite.github.io/charts"]
@@ -237,6 +253,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^concourse/"],
       "groupName": "concourse",
       "registryUrls": ["https://concourse-charts.storage.googleapis.com"]
@@ -244,6 +261,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^gitlab/"],
       "groupName": "gitlab",
       "registryUrls": ["https://charts.gitlab.io"]
@@ -251,6 +269,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^harbor/"],
       "groupName": "harbor",
       "registryUrls": ["https://helm.goharbor.io"]
@@ -258,6 +277,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^jenkins/"],
       "groupName": "jenkins",
       "registryUrls": ["https://charts.jenkins.io"]
@@ -265,6 +285,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^sonatype/"],
       "groupName": "sonatype",
       "registryUrls": ["https://sonatype.github.io/helm3-charts"]
@@ -272,6 +293,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^renovate/"],
       "groupName": "renovate",
       "registryUrls": ["https://docs.renovatebot.com/helm-charts"]
@@ -279,6 +301,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^elastic/"],
       "groupName": "elastic",
       "registryUrls": ["https://helm.elastic.co"]
@@ -286,6 +309,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^grafana/"],
       "groupName": "grafana",
       "registryUrls": ["https://grafana.github.io/helm-charts"]
@@ -293,6 +317,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^influxdata/"],
       "groupName": "influxdata",
       "registryUrls": ["https://helm.influxdata.com"]
@@ -300,6 +325,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^jaegertracing/"],
       "groupName": "jaegertracing",
       "registryUrls": ["https://jaegertracing.github.io/helm-charts"]
@@ -307,6 +333,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^prometheus-community/"],
       "groupName": "prometheus-community",
       "registryUrls": ["https://prometheus-community.github.io/helm-charts"]
@@ -314,6 +341,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^sentry/"],
       "groupName": "sentry",
       "registryUrls": ["https://sentry-kubernetes.github.io/charts"]
@@ -321,6 +349,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^kong/"],
       "groupName": "kong",
       "registryUrls": ["https://charts.konghq.com"]
@@ -328,6 +357,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^haproxytech/"],
       "groupName": "haproxytech",
       "registryUrls": ["https://haproxytech.github.io/helm-charts"]
@@ -335,6 +365,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^ingress-nginx/"],
       "groupName": "ingress-nginx",
       "registryUrls": ["https://kubernetes.github.io/ingress-nginx"]
@@ -342,6 +373,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^traefik/"],
       "groupName": "traefik",
       "registryUrls": ["https://helm.traefik.io/traefik"]
@@ -349,6 +381,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^anchore/"],
       "groupName": "anchore",
       "registryUrls": ["https://charts.anchore.io"]
@@ -356,6 +389,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^aqua-helm/"],
       "groupName": "aqua-helm",
       "registryUrls": ["https://helm.aquasec.com"]
@@ -363,6 +397,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^jetstack/"],
       "groupName": "jetstack",
       "registryUrls": ["https://charts.jetstack.io"]
@@ -370,6 +405,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^falcosecurity/"],
       "groupName": "falcosecurity",
       "registryUrls": ["https://falcosecurity.github.io/charts"]
@@ -377,6 +413,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^ory/"],
       "groupName": "ory",
       "registryUrls": ["https://k8s.ory.sh/helm/charts"]
@@ -384,6 +421,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^minio/"],
       "groupName": "minio",
       "registryUrls": ["https://helm.min.io"]
@@ -391,6 +429,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^vmware-tanzu/"],
       "groupName": "vmware-tanzu",
       "registryUrls": ["https://vmware-tanzu.github.io/helm-charts"]
@@ -398,6 +437,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^softonic/"],
       "groupName": "softonic",
       "registryUrls": ["https://charts.softonic.io"]
@@ -405,6 +445,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^oteemocharts/"],
       "groupName": "oteemocharts",
       "registryUrls": ["https://oteemo.github.io/charts"]
@@ -412,6 +453,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^codecentric/"],
       "groupName": "codecentric",
       "registryUrls": ["https://codecentric.github.io/helm-charts"]
@@ -419,6 +461,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^azure-samples/"],
       "groupName": "azure-samples",
       "registryUrls": ["https://azure-samples.github.io/helm-charts"]
@@ -426,6 +469,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^cetic/"],
       "groupName": "cetic",
       "registryUrls": ["https://cetic.github.io/helm-charts"]
@@ -433,6 +477,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^k8s-at-home/"],
       "groupName": "k8s-at-home",
       "registryUrls": ["https://k8s-at-home.com/charts"]
@@ -440,6 +485,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^gabibbo97/"],
       "groupName": "gabibbo97",
       "registryUrls": ["https://gabibbo97.github.io/charts"]
@@ -447,6 +493,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^bitnami/"],
       "groupName": "bitnami",
       "registryUrls": ["https://charts.bitnami.com/bitnami"]
@@ -454,6 +501,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "labels": ["charts"],
       "packagePatterns": ["^stable/"],
       "groupName": "stable",
       "registryUrls": ["https://kubernetes-charts.storage.googleapis.com"]
