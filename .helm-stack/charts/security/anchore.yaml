@@ -1,0 +1,8 @@
+repos:
+# https://github.com/anchore/anchore-charts
+- name: anchore
+  url: https://charts.anchore.io
+
+charts:
+- name: anchore/anchore-engine@1.9.6
+- name: anchore/anchore-admission-controller@0.2.8
