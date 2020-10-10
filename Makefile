@@ -32,3 +32,6 @@ gen:
 
 clean:
 	${HELM_STACK} clean
+
+test.renovate:
+	renovate --dry-run --log-level debug arhat-dev/infrastructure
