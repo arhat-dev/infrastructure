@@ -60,7 +60,7 @@ metadata:
     heritage: "Helm"
 type: Opaque
 data:
-  redis-password: "c0lkam5vNXdKag=="
+  redis-password: "Zm9v"
 ---
 # Source: redis/templates/configmap-scripts.yaml
 apiVersion: v1
@@ -350,7 +350,7 @@ spec:
       annotations:
         checksum/health: 15d391befd58aa3400ab193ac3cae8f2f87432d2a10f937ccdc2e217d6ffbab9
         checksum/configmap: d6ed65aebd8a0c5b6d03f17eb3f2c5330cac1ddb95b48cd1923191c661002e06
-        checksum/secret: 9f09a1665deb5bd64664c3a2e4435ec91f30fac243cc56667cf9dcecd90134fa
+        checksum/secret: eec8929ad3bc22ffc5811e6f67e3c500f482a2e38c5db5b55c272111d803b856
         prometheus.io/port: "9121"
         prometheus.io/scrape: "true"
     spec:
@@ -507,7 +507,7 @@ spec:
       annotations:
         checksum/health: 15d391befd58aa3400ab193ac3cae8f2f87432d2a10f937ccdc2e217d6ffbab9
         checksum/configmap: d6ed65aebd8a0c5b6d03f17eb3f2c5330cac1ddb95b48cd1923191c661002e06
-        checksum/secret: d65e346850a397f4ecf6ad3fda19a477b043367abbb31c5f2211ae6754f39898
+        checksum/secret: eec8929ad3bc22ffc5811e6f67e3c500f482a2e38c5db5b55c272111d803b856
         prometheus.io/port: "9121"
         prometheus.io/scrape: "true"
     spec:
