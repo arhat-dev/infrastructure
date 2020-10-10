@@ -15,14 +15,18 @@
 include scripts/check.mk
 include scripts/lint.mk
 
-HELM_STACK := $(shell command -v helm-stack)
 CLUSTER_NAME ?= all
+KUBERNETES_VERSION ?= v1.18
+
+HELM_STACK := docker run -t --rm -v "$(shell pwd):$(shell pwd)" -w "$(shell pwd)" \
+	-e PATH="/opt/helm/v3:/opt/kube/${KUBERNETES_VERSION}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
+	--entrypoint /bin/sh arhatdev/helm-stack:latest -c "/helm-stack
 
 ensure:
-	${HELM_STACK} ensure
+	${HELM_STACK} ensure"
 
 gen:
-	${HELM_STACK} gen ${CLUSTER_NAME}
+	${HELM_STACK} gen ${CLUSTER_NAME}"
 
 clean:
-	${HELM_STACK} clean
+	${HELM_STACK} clean"

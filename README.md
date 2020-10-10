@@ -6,10 +6,8 @@ Create service infrastructure on top of Kubernetes for daily development
 
 ## Prerequisites
 
-- (required) [`helm v3`](https://github.com/helm/helm) installed to your local `PATH`
-- (required) [`helm-stack`](https://github.com/arhat-dev/helm-stack) installed to your local `PATH`
-  - To install, run `GOOS=$(go env GOHOSTOS) GOARCH=$(go env GOHOSTARCH) go get -u arhat.dev/helm-stack/cmd/helm-stack` and make sure your `PATH` env includes `$GOPATH/bin`
-- (optional) [`kubectl`](https://github.com/kubernetes/kubernetes/releases) installed to your local `PATH` (if you want to apply manifests to your cluster directly)
+- `docker` to run `helm-stack`
+- GNU `make`
 
 ## Workflow
 
@@ -21,14 +19,14 @@ Create a private repo with this template to avoid any credential leak.
 
 1. Add or update repo/chart references in [`.helm-stack`](./.helm-stack)
 2. Define your clusters in [`.helm-stack.yaml`](./.helm-stack.yaml)
-3. Run `helm-stack ensure` to pull all charts to local directory and extract values file for your clusters
+3. Run `make ensure` to pull all charts to local directory and extract values file for your clusters
 
 ### Continuous service upgrade (upgrade helm charts)
 
 1. Add or update repo/chart references in [`.helm-stack`](./.helm-stack)
 2. Update cluster deployments in [`.helm-stack.yaml`](./.helm-stack.yaml)
    - Usually you should not change the deployment name
-3. Run `helm-stack ensure` to make sure everything up to date
+3. Run `make ensure` to make sure everything up to date
    - DO NOT CHANGE anything in values files at this step
 
 ## LICENSE
