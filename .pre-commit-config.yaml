@@ -1,8 +1,7 @@
-# exclude: |
-#   (?x)^(
-#     file-regex-pattern-1|
-#     file-regex-pattern-2
-#   )$
+exclude: |
+  (?x)^(
+    clusters/.*/manifests/.*.yaml
+  )$
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -11,3 +10,5 @@ repos:
   - id: trailing-whitespace
   - id: end-of-file-fixer
   - id: check-yaml
+    args:
+    - --allow-multiple-documents

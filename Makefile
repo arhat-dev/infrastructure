@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include scripts/check.mk
 include scripts/lint.mk
 
 HELM_STACK := $(shell command -v helm-stack)

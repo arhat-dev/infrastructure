@@ -20,6 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: Lint
       run: |
         make lint.all
+
+    - name: Ensure file clean
+      run: |
+        make check.files

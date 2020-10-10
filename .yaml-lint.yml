@@ -4,6 +4,9 @@ yaml-files:
 
 ignore: |
   build/
+  charts/
+  clusters/*/manifests
+  clusters/*/*.yaml
 
 rules:
   braces:

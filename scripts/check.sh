@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Copyright 2020 The arhat.dev Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,19 +14,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-RUN_LINTER := docker run -t --rm -v "$(shell pwd):$(shell pwd)" -w "$(shell pwd)"
+set -e
 
-lint.file:
-	${RUN_LINTER} mstruebing/editorconfig-checker:2.1.0 ec -config .ecrc
+files() {
+  make ensure
+  make gen
+  if ! git diff --exit-code; then
+    echo "generated file not up to date"
+    exit 1
+  fi
 
-lint.shell:
-	${RUN_LINTER} koalaman/shellcheck-alpine:stable \
-		sh -c "find . | grep -E -e '.sh\$$' | grep -v build | grep -v charts/ | xargs -I'{}' shellcheck -S warning -e SC1090 -e SC1091 {} ;"
+  make clean
+  if ! git diff --exit-code; then
+    echo "file not cleaned up"
+    exit 1
+  fi
+}
 
-lint.yaml:
-	${RUN_LINTER} arhatdev/yamllint:latest yamllint -c .yaml-lint.yml .
-
-lint.all: \
-	lint.file \
-	lint.shell \
-	lint.yaml
+# shellcheck disable=SC2068
+$@
