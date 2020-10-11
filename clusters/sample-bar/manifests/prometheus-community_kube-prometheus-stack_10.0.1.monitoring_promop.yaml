@@ -17879,7 +17879,7 @@ spec:
 
 
         imagePullPolicy: IfNotPresent
-        image: "quay.io/coreos/kube-state-metrics:v1.9.7"
+        image: "quay.io/coreos/kube-state-metrics:v1.9.6"
         ports:
         - containerPort: 8080
         livenessProbe:
