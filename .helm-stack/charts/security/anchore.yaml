@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: anchore/anchore-engine@1.9.6
-- name: anchore/anchore-admission-controller@0.2.8
+- name: anchore/anchore-admission-controller@0.2.9
