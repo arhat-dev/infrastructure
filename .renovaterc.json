@@ -92,63 +92,70 @@
   "packageRules": [
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "elastic",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^docker\\.elastic\\.co/"],
       "registryUrls": ["docker.elastic.co"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "zalando",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^registry\\.opensource\\.zalan\\.do/"],
       "registryUrls": ["registry.opensource.zalan.do"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "gcr",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^gcr\\.io/"],
       "registryUrls": ["gcr.io"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "quay",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^quay\\.io/"],
       "registryUrls": ["quay.io"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "gitlab-registry",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^registry\\.gitlab\\.com/"],
       "registryUrls": ["registry.gitlab.com"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "redhat-registry",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": ["^registry\\.access\\.redhat\\.com/"],
       "registryUrls": ["registry.access.redhat.com"],
       "labels": ["images"]
     },
     {
       "managers": ["kubernetes"],
+      "draftPR": true,
+      "semanticCommitScope": "image",
       "groupName": "dockerhub",
       "datasources": ["docker"],
-      "semanticCommitScope": "image",
       "packagePatterns": [".*"],
       "registryUrls": ["index.docker.io"],
       "labels": ["images"]
