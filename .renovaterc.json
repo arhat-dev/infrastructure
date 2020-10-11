@@ -2,20 +2,6 @@
   "extends": ["config:base", "github>arhat-dev/renovate-presets:general"],
   "enabledManagers": ["regex", "kubernetes"],
   "reviewers": [],
-  "schedule": ["every weekend"],
-  "timezone": "Asia/Hong_Kong",
-  "prBodyDefinitions": {
-    "Package": "`{{{lookupName}}}`"
-  },
-  "prBodyColumns": [
-    "Package",
-    "Update",
-    "Type",
-    "New value",
-    "Package file",
-    "References"
-  ],
-  "dependencyDashboardTitle": "Available dependency upgrades",
   "dependencyDashboardHeader": "This issue tracks chart version upgrades",
   "excludeCommitPaths": [".helm-stack.yaml"],
   "aliases": {
