@@ -4,7 +4,7 @@ environments:
   kubeContext: sample-bar
   deployments:
   - name: testing/redis
-    chart: bitnami/redis@11.1.0
+    chart: bitnami/redis@11.1.1
     baseValues: values-production.yaml
 
 # another cluster in clusters/sample-bar
