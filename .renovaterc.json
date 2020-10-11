@@ -88,8 +88,8 @@
       "matchStrings": [
         "- name: (?<repoName>.*?)/(?<chartName>.*?)@(?<currentValue>.*?)\\s"
       ],
-      "depNameTemplate": "{{{chartName}}}",
-      "lookupNameTemplate": "{{{repoName}}}/{{{chartName}}}",
+      "depNameTemplate": "{{{repoName}}}/{{{chartName}}}",
+      "lookupNameTemplate": "{{{chartName}}}",
       "datasourceTemplate": "helm",
       "versioningTemplate": "semver"
     }
