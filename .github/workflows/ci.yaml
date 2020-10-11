@@ -25,6 +25,6 @@ jobs:
       run: |
         make lint.all
 
-    - name: Ensure file clean
+    - name: Validation
       run: |
-        make check.files
+        make check.all

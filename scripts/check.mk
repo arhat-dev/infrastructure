@@ -14,3 +14,10 @@
 
 check.files:
 	sh scripts/check.sh files
+
+check.config:
+	sh scripts/check.sh config
+
+check.all: \
+	check.files \
+	check.config

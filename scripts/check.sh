@@ -31,5 +31,17 @@ files() {
   fi
 }
 
+# shellcheck disable=SC2086,SC2089,SC2090
+config() {
+  cmd="npx --package renovate -c 'renovate-config-validator'"
+
+  if ! command -v npx ; then
+    docker run -t --rm -v "$(pwd):$(pwd)" -w "$(pwd)" node:12-alpine ${cmd}
+    return
+  fi
+
+  ${cmd}
+}
+
 # shellcheck disable=SC2068
 $@
