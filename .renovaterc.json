@@ -4,7 +4,6 @@
   "reviewers": [],
   "schedule": ["every weekend"],
   "semanticCommitType": "deps",
-  "semanticCommitScope": "charts",
   "semanticCommits": "enabled",
   "timezone": "Asia/Hong_Kong",
   "unicodeEmoji": true,
@@ -112,7 +111,8 @@
       "managers": ["kubernetes"],
       "groupName": "elastic",
       "datasources": ["docker"],
-      "packagePatterns": ["^docker.elastic.co"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^docker\\.elastic\\.co/"],
       "registryUrls": ["docker.elastic.co"],
       "labels": ["images"]
     },
@@ -120,7 +120,8 @@
       "managers": ["kubernetes"],
       "groupName": "zalando",
       "datasources": ["docker"],
-      "packagePatterns": ["^registry.opensource.zalan.do"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^registry\\.opensource\\.zalan\\.do/"],
       "registryUrls": ["registry.opensource.zalan.do"],
       "labels": ["images"]
     },
@@ -128,7 +129,8 @@
       "managers": ["kubernetes"],
       "groupName": "gcr",
       "datasources": ["docker"],
-      "packagePatterns": ["^gcr.io"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^gcr\\.io/"],
       "registryUrls": ["gcr.io"],
       "labels": ["images"]
     },
@@ -136,7 +138,8 @@
       "managers": ["kubernetes"],
       "groupName": "quay",
       "datasources": ["docker"],
-      "packagePatterns": ["^quay.io"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^quay\\.io/"],
       "registryUrls": ["quay.io"],
       "labels": ["images"]
     },
@@ -144,7 +147,8 @@
       "managers": ["kubernetes"],
       "groupName": "gitlab-registry",
       "datasources": ["docker"],
-      "packagePatterns": ["^registry.gitlab.com"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^registry\\.gitlab\\.com/"],
       "registryUrls": ["registry.gitlab.com"],
       "labels": ["images"]
     },
@@ -152,7 +156,8 @@
       "managers": ["kubernetes"],
       "groupName": "redhat-registry",
       "datasources": ["docker"],
-      "packagePatterns": ["^registry.access.redhat.com"],
+      "semanticCommitScope": "image",
+      "packagePatterns": ["^registry\\.access\\.redhat\\.com/"],
       "registryUrls": ["registry.access.redhat.com"],
       "labels": ["images"]
     },
@@ -160,13 +165,21 @@
       "managers": ["kubernetes"],
       "groupName": "dockerhub",
       "datasources": ["docker"],
+      "semanticCommitScope": "image",
       "packagePatterns": [".*"],
       "registryUrls": ["index.docker.io"],
       "labels": ["images"]
     },
     {
       "managers": ["regex"],
+      "datasources": ["git-tags"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"]
+    },
+    {
+      "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^fluent/"],
       "groupName": "fluent",
@@ -175,6 +188,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^strimzi/"],
       "groupName": "strimzi",
@@ -183,6 +197,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^kedacore/"],
       "groupName": "kedacore",
@@ -191,6 +206,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^mattermost/"],
       "groupName": "mattermost",
@@ -199,6 +215,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^nats/"],
       "groupName": "nats",
@@ -207,6 +224,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^redash/"],
       "groupName": "redash",
@@ -215,6 +233,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^astronomer/"],
       "groupName": "astronomer",
@@ -223,6 +242,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^dask/"],
       "groupName": "dask",
@@ -231,6 +251,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^jupyterhub/"],
       "groupName": "jupyterhub",
@@ -239,6 +260,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^pega/"],
       "groupName": "pega",
@@ -247,6 +269,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^argo/"],
       "groupName": "argo",
@@ -255,6 +278,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^buildkite/"],
       "groupName": "buildkite",
@@ -263,6 +287,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^concourse/"],
       "groupName": "concourse",
@@ -271,6 +296,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^gitlab/"],
       "groupName": "gitlab",
@@ -279,6 +305,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^harbor/"],
       "groupName": "harbor",
@@ -287,6 +314,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^jenkins/"],
       "groupName": "jenkins",
@@ -295,6 +323,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^sonatype/"],
       "groupName": "sonatype",
@@ -303,6 +332,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^renovate/"],
       "groupName": "renovate",
@@ -311,6 +341,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^elastic/"],
       "groupName": "elastic",
@@ -319,6 +350,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^grafana/"],
       "groupName": "grafana",
@@ -327,6 +359,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^influxdata/"],
       "groupName": "influxdata",
@@ -335,6 +368,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^jaegertracing/"],
       "groupName": "jaegertracing",
@@ -343,6 +377,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^prometheus-community/"],
       "groupName": "prometheus-community",
@@ -351,6 +386,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^sentry/"],
       "groupName": "sentry",
@@ -359,6 +395,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^kong/"],
       "groupName": "kong",
@@ -367,6 +404,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^haproxytech/"],
       "groupName": "haproxytech",
@@ -375,6 +413,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^ingress-nginx/"],
       "groupName": "ingress-nginx",
@@ -383,6 +422,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^traefik/"],
       "groupName": "traefik",
@@ -391,6 +431,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^anchore/"],
       "groupName": "anchore",
@@ -399,6 +440,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^aqua-helm/"],
       "groupName": "aqua-helm",
@@ -407,6 +449,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^jetstack/"],
       "groupName": "jetstack",
@@ -415,6 +458,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^falcosecurity/"],
       "groupName": "falcosecurity",
@@ -423,6 +467,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^ory/"],
       "groupName": "ory",
@@ -431,6 +476,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^minio/"],
       "groupName": "minio",
@@ -439,6 +485,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^vmware-tanzu/"],
       "groupName": "vmware-tanzu",
@@ -447,6 +494,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^softonic/"],
       "groupName": "softonic",
@@ -455,6 +503,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^oteemocharts/"],
       "groupName": "oteemocharts",
@@ -463,6 +512,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^codecentric/"],
       "groupName": "codecentric",
@@ -471,6 +521,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^azure-samples/"],
       "groupName": "azure-samples",
@@ -479,6 +530,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^cetic/"],
       "groupName": "cetic",
@@ -487,6 +539,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^k8s-at-home/"],
       "groupName": "k8s-at-home",
@@ -495,6 +548,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^gabibbo97/"],
       "groupName": "gabibbo97",
@@ -503,6 +557,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^bitnami/"],
       "groupName": "bitnami",
@@ -511,6 +566,7 @@
     {
       "managers": ["regex"],
       "datasources": ["helm"],
+      "semanticCommitScope": "charts",
       "labels": ["charts"],
       "packagePatterns": ["^stable/"],
       "groupName": "stable",
