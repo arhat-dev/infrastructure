@@ -78,12 +78,12 @@
     {
       "fileMatch": [".+.yaml$", ".+.yml$"],
       "matchStrings": [
-        "- name: .+@(?<currentValue>.*?)\\s+git:\\s+url: (?<gitRepo>.*?)\\s"
+        "- name: .+@v?(?<currentValue>.*?)\\s+git:\\s+url: (?<gitRepo>.*?)\\s"
       ],
       "depNameTemplate": "{{{gitRepo}}}",
       "lookupNameTemplate": "{{{gitRepo}}}",
       "datasourceTemplate": "git-tags",
-      "versioningTemplate": "git"
+      "versioningTemplate": "semver"
     }
   ],
   "kubernetes": {
