@@ -7,7 +7,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -55,7 +55,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: "redis"
     heritage: "Helm"
 type: Opaque
@@ -70,7 +70,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     heritage: Helm
     release: redis
 data:
@@ -128,7 +128,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     heritage: Helm
     release: redis
 data:
@@ -156,7 +156,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     heritage: Helm
     release: redis
 data:
@@ -241,7 +241,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -263,7 +263,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
     app.kubernetes.io/component: "metrics"
@@ -286,7 +286,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -308,7 +308,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -330,7 +330,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -344,13 +344,13 @@ spec:
     metadata:
       labels:
         app: redis
-        chart: redis-11.1.0
+        chart: redis-11.1.1
         release: redis
         role: master
       annotations:
-        checksum/health: 15d391befd58aa3400ab193ac3cae8f2f87432d2a10f937ccdc2e217d6ffbab9
-        checksum/configmap: d6ed65aebd8a0c5b6d03f17eb3f2c5330cac1ddb95b48cd1923191c661002e06
-        checksum/secret: eec8929ad3bc22ffc5811e6f67e3c500f482a2e38c5db5b55c272111d803b856
+        checksum/health: c9e2a46afc317aadf868fdbc5a678e453cded43d853cd166e8cea2007f1000e7
+        checksum/configmap: 3aaff193c957d8bbd1377d7b4e9a65fad68c3a041bf18bd9dcf340c1b553c03b
+        checksum/secret: ce20c894d78723108374646933e1bf992a77677ea10253c994c5a51a287cc4b2
         prometheus.io/port: "9121"
         prometheus.io/scrape: "true"
     spec:
@@ -360,7 +360,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: redis
-          image: docker.io/bitnami/redis:6.0.8-debian-10-r0
+          image: docker.io/bitnami/redis:6.0.8-debian-10-r35
           imagePullPolicy: "IfNotPresent"
           securityContext:
             runAsUser: 1001
@@ -421,7 +421,7 @@ spec:
             - name: redis-tmp-conf
               mountPath: /opt/bitnami/redis/etc/
         - name: metrics
-          image: docker.io/bitnami/redis-exporter:1.11.1-debian-10-r12
+          image: docker.io/bitnami/redis-exporter:1.12.0-debian-10-r9
           imagePullPolicy: "IfNotPresent"
           command:
             - /bin/bash
@@ -486,7 +486,7 @@ metadata:
   namespace: testing
   labels:
     app: redis
-    chart: redis-11.1.0
+    chart: redis-11.1.1
     release: redis
     heritage: Helm
 spec:
@@ -502,12 +502,12 @@ spec:
       labels:
         app: redis
         release: redis
-        chart: redis-11.1.0
+        chart: redis-11.1.1
         role: slave
       annotations:
-        checksum/health: 15d391befd58aa3400ab193ac3cae8f2f87432d2a10f937ccdc2e217d6ffbab9
-        checksum/configmap: d6ed65aebd8a0c5b6d03f17eb3f2c5330cac1ddb95b48cd1923191c661002e06
-        checksum/secret: eec8929ad3bc22ffc5811e6f67e3c500f482a2e38c5db5b55c272111d803b856
+        checksum/health: c9e2a46afc317aadf868fdbc5a678e453cded43d853cd166e8cea2007f1000e7
+        checksum/configmap: 3aaff193c957d8bbd1377d7b4e9a65fad68c3a041bf18bd9dcf340c1b553c03b
+        checksum/secret: ce20c894d78723108374646933e1bf992a77677ea10253c994c5a51a287cc4b2
         prometheus.io/port: "9121"
         prometheus.io/scrape: "true"
     spec:
@@ -517,7 +517,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: redis
-          image: docker.io/bitnami/redis:6.0.8-debian-10-r0
+          image: docker.io/bitnami/redis:6.0.8-debian-10-r35
           imagePullPolicy: "IfNotPresent"
           securityContext:
             runAsUser: 1001
@@ -585,7 +585,7 @@ spec:
             - name: redis-tmp-conf
               mountPath: /opt/bitnami/redis/etc
         - name: metrics
-          image: docker.io/bitnami/redis-exporter:1.11.1-debian-10-r12
+          image: docker.io/bitnami/redis-exporter:1.12.0-debian-10-r9
           imagePullPolicy: "IfNotPresent"
           command:
             - /bin/bash
