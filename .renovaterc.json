@@ -15,9 +15,9 @@
     "Package file",
     "References"
   ],
-  "dependencyDashboardTitle": "Available chart upgrades",
+  "dependencyDashboardTitle": "Available dependency upgrades",
   "dependencyDashboardHeader": "This issue tracks chart version upgrades",
-  "excludeCommitPaths": ["clusters/**", ".helm-stack.yaml"],
+  "excludeCommitPaths": [".helm-stack.yaml"],
   "aliases": {
     "fluent": "https://fluent.github.io/helm-charts",
     "strimzi": "https://strimzi.io/charts",
