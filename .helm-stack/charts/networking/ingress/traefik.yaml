@@ -4,4 +4,4 @@ repos:
   url: https://helm.traefik.io/traefik
 
 charts:
-- name: traefik/traefik@9.4.3
+- name: traefik/traefik@9.6.0
