@@ -22,102 +22,102 @@ Create a private repo using this template to avoid any credential leak.
 
 1. Add or update helm repo and helm chart references in [`.helm-stack/charts`](./.helm-stack/charts) and [`.helm-stack/repos.yaml`](./.helm-stack/repos.yaml)
 
-  ```yaml
-  repos:
-    # name of the chart repo
-  - name: example
+   ```yaml
+   repos:
+     # name of the chart repo
+   - name: example
 
-    # url of chart repo
-    url: https://example.com/helm-charts
+     # url of chart repo
+     url: https://example.com/helm-charts
 
-    # (optional) authentication
-    auth:
-      # http basic is the only auth method supported by helm
-      httpBasic:
-        username: foouser
-        password: foopassword
+     # (optional) authentication
+     auth:
+       # http basic is the only auth method supported by helm
+       httpBasic:
+         username: foouser
+         password: foopassword
 
-    # (optional) tls configuration
-    tls:
-      # certificate ca file path
-      caCert: /path/to/ca.crt
-      cert: /path/to/cert.pem
-      key: /path/to/key.pem
-      # establish tls connection even not verified
-      insecureSkipVerify: false
+     # (optional) tls configuration
+     tls:
+       # certificate ca file path
+       caCert: /path/to/ca.crt
+       cert: /path/to/cert.pem
+       key: /path/to/key.pem
+       # establish tls connection even not verified
+       insecureSkipVerify: false
 
-  charts:
-    # if it is a chart from a standard chart repo, the chart definition only requires `name`
-    # and the `name` format is `<CHART_REPO>/<CHART_NAME>@<CHART_VERSION>`
-  - name: bitnami/metallb@0.1.24
+   charts:
+     # if it is a chart from a standard chart repo, the chart definition only requires `name`
+     # and the `name` format is `<CHART_REPO>/<CHART_NAME>@<CHART_VERSION>`
+   - name: bitnami/metallb@0.1.24
 
-    # if it is a chart from a git repository, the chart definition requires `name` and `git`
-    # repo source config, and the name format is `<CHART_NAME>@<GIT_TAG>` where GIT_TAG will
-    # be treated as CHART_VERSION
-    # (of course you can include `/` in the name)
-  - name: ingress-nginx@ingress-nginx-3.3.0
-    git:
-      # repo url
-      url: https://github.com/kubernetes/ingress-nginx
-      # relative path in the repo
-      path: charts/ingress-nginx
+     # if it is a chart from a git repository, the chart definition requires `name` and `git`
+     # repo source config, and the name format is `<CHART_NAME>@<GIT_TAG>` where GIT_TAG will
+     # be treated as CHART_VERSION
+     # (of course you can include `/` in the name)
+   - name: ingress-nginx@ingress-nginx-3.3.0
+     git:
+       # repo url
+       url: https://github.com/kubernetes/ingress-nginx
+       # relative path in the repo
+       path: charts/ingress-nginx
 
-    # if it is a chart created locally and not published anywhere, the chart definition requires
-    # `name` and `local`, the name format is the same with the ones from git repo
-    # NOTE: you should include local charts in .gitignore
-  - name: foo@latest
-    # local has no specification for now
-    # local chart won't copy from anywhere, you should create and maintain it in this repo
-    local: {}
-  ```
+     # if it is a chart created locally and not published anywhere, the chart definition requires
+     # `name` and `local`, the name format is the same with the ones from git repo
+     # NOTE: you should include local charts in .gitignore
+   - name: foo@latest
+     # local has no specification for now
+     # local chart won't copy from anywhere, you should create and maintain it in this repo
+     local: {}
+   ```
 
 1. You may need to add these new repos to the `"packageRules"` section in [`.renovaterc.json`](./.renovaterc.json) for automatic chart upgrade
 
-  ```js
-  {
-    // ...
-    "packageRules": [
-      // ...
-      {
-        "managers": ["regex"],
-        "datasources": ["helm"],
-        "semanticCommitScope": "charts",
-        "labels": ["charts"],
-        "packagePatterns": ["^example/"],                   // TODO: change the prefix
-        "groupName": "example",                             // TODO: change the group name
-        "registryUrls": ["https://example.com/helm-chart"]  // TODO: change the url (only one url allowed)
-      },
-      // ...
-    ]
-  }
-  ```
+   ```js
+   {
+     // ...
+     "packageRules": [
+       // ...
+       {
+         "managers": ["regex"],
+         "datasources": ["helm"],
+         "semanticCommitScope": "charts",
+         "labels": ["charts"],
+         "packagePatterns": ["^example/"],                   // TODO: change the prefix
+         "groupName": "example",                             // TODO: change the group name
+         "registryUrls": ["https://example.com/helm-chart"]  // TODO: change the url (only one url allowed)
+       },
+       // ...
+     ]
+   }
+   ```
 
 1. Define your clusters (environments) in [`.helm-stack/clusters`](./.helm-stack/clusters) (You can start with a reference cluster config: [`docs/sample-cluster.yaml`](./docs/sample-cluster.yaml))
 
-  ```yaml
-  environments:
-    # name of the cluster
-  - name: <CLUSTER_NAME>
+   ```yaml
+   environments:
+     # name of the cluster
+   - name: <CLUSTER_NAME>
 
-    # (optional) kubeconfig context name for this cluster, used for kubectl apply/delete flag
-    # `--context <context name>`, if not set or set to empty, will use default `current-context`
-    # in kubeconfig (default: "")
-    kubeContext: <CLUSTER_NAME>-admin@<CLUSTER_NAME>
+     # (optional) kubeconfig context name for this cluster, used for kubectl apply/delete flag
+     # `--context <context name>`, if not set or set to empty, will use default `current-context`
+     # in kubeconfig (default: "")
+     kubeContext: <CLUSTER_NAME>-admin@<CLUSTER_NAME>
 
-    # charts to deploy
-    deployments:
-      # deployment name sets deployment `<namespace>` for helm template flag `--namespace <namespace>`
-      # and `<name>` for helm template flag `--set fullnameOverride=<name>`
-    - name: <namespace>/<name>
-      # chart name we have defined in previous config files
-      chart: <CHART_NAME>
-      # the values file used as default values (default: values.yaml)
-      baseValues: values-production.yaml
-      # set if we need to set `--namespace <namespace>` for `kubectl apply/delete` commands
-      # this should be set to `true` if the chart templates set `metadata.namespace`
-      # (default: false)
-      namespaceInTemplate: true
-  ```
+     # charts to deploy
+     deployments:
+       # deployment name sets deployment `<namespace>` for helm template flag `--namespace <namespace>`
+       # and `<name>` for helm template flag `--set fullnameOverride=<name>`
+     - name: <namespace>/<name>
+       # chart name we have defined in previous config files
+       chart: <CHART_NAME>
+       # the values file used as default values (default: values.yaml)
+       baseValues: values-production.yaml
+       # set if we need to set `--namespace <namespace>` for `kubectl apply/delete` commands
+       # this should be set to `true` if the chart templates set `metadata.namespace`
+       # (default: false)
+       namespaceInTemplate: true
+   ```
 
 1. Run `make ensure` to pull all charts to local directory and extract values file for your clusters
    - This operation will copy files
@@ -147,7 +147,7 @@ This is a check list for your manual cluster deployment upgrades
 Perform semi-automatic helm charts upgrade with renovate and pull requests
 
 1. Enable renovate integration in this repo
-2. Wait until or trigger renovate to update pull requests or issue dashboard (then approve necessary upgrades in the dashboard)
+1. Wait until or trigger renovate to update pull requests or issue dashboard (then approve necessary upgrades in the dashboard)
    - CI passed:
      - Chart not used: just merge it
      - Chart used: CI should fail in this case, check if there is any error in your ci script
@@ -161,7 +161,7 @@ Perform semi-automatic helm charts upgrade with renovate and pull requests
        - Merge all these upgrades (from their own branches)
        - Update your cluster config and commit (see [Deployment Upgrade](#deployment-upgrade))
        - Push your new branch, create a new pull request and request a review
-3. Merge reviewed pull requests to your master branch
+1. Merge reviewed pull requests to your master branch
 
 ## LICENSE
 
