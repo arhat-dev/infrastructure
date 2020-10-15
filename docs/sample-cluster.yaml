@@ -4,8 +4,14 @@ environments:
 
   deployments:
   # name is the namespaced name, format: <namespace>/<fullnameOverride>
-  - name: storage/local-path-provisioner
+  - name: netwok/calico
     # chart is the reference to a predefined chart name in `${REPO_ROOT}/.helm-stack/charts`
+    chart: arhat-dev/calico@0.1.1
+
+  - name: network/calico-node
+    chart: arhat-dev/calico-node@0.1.1
+
+  - name: storage/local-path-provisioner
     chart: rancher/local-path-provisioner@v0.0.17
 
   - name: monitoring/prometheus-operator
