@@ -70,6 +70,16 @@
       "lookupNameTemplate": "{{{gitRepo}}}",
       "datasourceTemplate": "git-tags",
       "versioningTemplate": "semver"
+    },
+    {
+      "fileMatch": ["docs/sample-cluster\\.yaml$"],
+      "matchStrings": [
+        "- chart: (?<repoName>.*?)/(?<chartName>.*?)@(?<currentValue>.*?)\\s"
+      ],
+      "depNameTemplate": "{{{repoName}}}/{{{chartName}}}",
+      "lookupNameTemplate": "{{{chartName}}}",
+      "datasourceTemplate": "helm",
+      "versioningTemplate": "semver"
     }
   ],
   "kubernetes": {
