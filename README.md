@@ -21,7 +21,7 @@ Create a private repo using this template to avoid any credential leak.
 ### Initial Provisioning
 
 1. Add or update helm repo and helm chart references in [`.helm-stack/charts`](./.helm-stack/charts) and [`.helm-stack/repos.yaml`](./.helm-stack/repos.yaml)
-  
+
   ```yaml
   repos:
     # name of the chart repo
@@ -45,7 +45,7 @@ Create a private repo using this template to avoid any credential leak.
       key: /path/to/key.pem
       # establish tls connection even not verified
       insecureSkipVerify: false
-  
+
   charts:
     # if it is a chart from a standard chart repo, the chart definition only requires `name`
     # and the `name` format is `<CHART_REPO>/<CHART_NAME>@<CHART_VERSION>`
