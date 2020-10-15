@@ -1,6 +1,6 @@
-# Infrastructure
+# Template Kubernetes Cluster
 
-[![CI](https://github.com/arhat-dev/infrastructure/workflows/CI/badge.svg)](https://github.com/arhat-dev/infrastructure/actions?query=workflow%3ACI)
+[![CI](https://github.com/arhat-dev/template-kubernetes-cluster/workflows/CI/badge.svg)](https://github.com/arhat-dev/template-kubernetes-cluster/actions?query=workflow%3ACI)
 
 Create service infrastructure on top of Kubernetes for all kinds of environment
 
