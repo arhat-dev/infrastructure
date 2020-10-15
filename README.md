@@ -73,7 +73,7 @@ Create a private repo using this template to avoid any credential leak.
 
 1. You may need to add these new repos to the `"packageRules"` section in [`.renovaterc.json`](./.renovaterc.json) for automatic chart upgrade
 
-  ```json
+  ```js
   {
     // ...
     "packageRules": [
