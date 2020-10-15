@@ -5,3 +5,4 @@ repos:
 
 charts:
 - name: renovate/renovate@23.49.1
+- name: arhat-dev/renovate-server@0.1.1
