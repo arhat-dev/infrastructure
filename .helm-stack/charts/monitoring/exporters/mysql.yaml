@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-mysql-exporter@0.7.1
+- name: prometheus-community/prometheus-mysql-exporter@1.0.0
