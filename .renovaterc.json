@@ -52,7 +52,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": [".+.yaml$", ".+.yml$"],
+      "fileMatch": ["\\.helm-stack/.+.yaml$", "\\.helm-stack/.+.yml$"],
       "matchStrings": [
         "- name: (?<repoName>.*?)/(?<chartName>.*?)@(?<currentValue>.*?)\\s"
       ],
@@ -62,9 +62,9 @@
       "versioningTemplate": "semver"
     },
     {
-      "fileMatch": [".+.yaml$", ".+.yml$"],
+      "fileMatch": ["\\.helm-stack/.+.yaml$", "\\.helm-stack/.+.yml$"],
       "matchStrings": [
-        "- name: .+@v?(?<currentValue>.*?)\\s+git:\\s+url: (?<gitRepo>.*?)\\s"
+        "- name: .+@(?<currentValue>.*?)\\s+git:\\s+url: (?<gitRepo>.*?)\\s"
       ],
       "depNameTemplate": "{{{gitRepo}}}",
       "lookupNameTemplate": "{{{gitRepo}}}",
