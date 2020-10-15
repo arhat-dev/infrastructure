@@ -1,0 +1,4 @@
+environments:
+- name: dev
+  kubeContext: dev
+  deployments: []

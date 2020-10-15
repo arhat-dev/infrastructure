@@ -1,0 +1,4 @@
+environments:
+- name: staging
+  kubeContext: staging
+  deployments: []
