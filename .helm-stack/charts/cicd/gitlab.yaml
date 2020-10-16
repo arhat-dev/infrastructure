@@ -3,5 +3,5 @@ repos:
   url: https://charts.gitlab.io
 
 charts:
-- name: gitlab/gitlab@4.4.3
+- name: gitlab/gitlab@4.4.4
 - name: gitlab/gitlab-runner@0.21.1
