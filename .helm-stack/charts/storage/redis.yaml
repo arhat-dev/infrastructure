@@ -4,6 +4,6 @@ repos:
   url: https://charts.softonic.io
 
 charts:
-- name: bitnami/redis@11.2.0
-- name: bitnami/redis-cluster@3.2.7
+- name: bitnami/redis@11.2.1
+- name: bitnami/redis-cluster@3.2.8
 - name: softonic/redis-sharded@0.3.0
