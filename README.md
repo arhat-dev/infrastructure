@@ -4,12 +4,13 @@
 
 Create service infrastructure on top of Kubernetes for all kinds of environment
 
+__NOTE:__ Chart dependencies in this repository is updated weekly according the the [renovate dashboard](https://github.com/arhat-dev/helm-charts/issues/2), please do not send pull request for chart upgrade.
+
 ## Prerequisites
 
-- `helm-stack` and `helm` binary installed to local PATH
+- `helm-stack` and `helm` binary installed to local PATH (or docker installed to run them in container with `make`)
   - To install `helm-stack`, run `GOOS=$(go env GOHOSTOS) GOARCH=$(go env GOHOSTARCH) go get -u arhat.dev/helm-stack/cmd/helm-stack`
   - To install `helm`, please refer to the [official guide](https://helm.sh/docs/intro/install/)
-  - or use `docker` to run `helm-stack` in container
 - GNU `make` (optoinal if you know how to invoke `helm-stack` correctly)
 
 ## Workflow
