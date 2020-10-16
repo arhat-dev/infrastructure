@@ -1,0 +1,2 @@
+charts:
+- name: enix/kube-router@1.1.2

@@ -1,0 +1,2 @@
+charts:
+- name: bitnami/zookeeper@5.22.0

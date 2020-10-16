@@ -1,0 +1,6 @@
+repos:
+- name: mlohr
+  url: https://helm-charts.mlohr.com
+
+charts:
+- name: mlohr/clickhouse@1.0.1

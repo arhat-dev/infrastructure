@@ -5,6 +5,10 @@
   "dependencyDashboardHeader": "This issue tracks chart version upgrades",
   "excludeCommitPaths": [".helm-stack.yaml"],
   "aliases": {
+    "arhat-dev": "https://helm-charts.arhat.dev",
+    "enix": "https://charts.enix.io/",
+    "cilium": "https://helm.cilium.io",
+    "bootc": "https://charts.boo.tc",
     "fluent": "https://fluent.github.io/helm-charts",
     "strimzi": "https://strimzi.io/charts",
     "kedacore": "https://kedacore.github.io/charts",
@@ -161,6 +165,51 @@
       "datasources": ["git-tags"],
       "semanticCommitScope": "charts",
       "labels": ["charts"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^arhat-dev/"],
+      "groupName": "arhat-dev",
+      "registryUrls": ["https://helm-charts.arhat.dev"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^mlohr/"],
+      "groupName": "mlohr",
+      "registryUrls": ["https://helm-charts.mlohr.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^enix/"],
+      "groupName": "enix",
+      "registryUrls": ["https://charts.enix.io/"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^bootc/"],
+      "groupName": "bootc",
+      "registryUrls": ["https://charts.boo.tc"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^cilium/"],
+      "groupName": "cilium",
+      "registryUrls": ["https://helm.cilium.io"]
     },
     {
       "managers": ["regex"],

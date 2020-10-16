@@ -23,7 +23,7 @@ repos:
 
 # https://github.com/Azure-Samples/helm-charts
 - name: azure-samples
-  url: https://azure-samples.github.io/helm-charts/
+  url: https://azure-samples.github.io/helm-charts
 
 # https://github.com/gabibbo97/charts
 - name: gabibbo97
@@ -36,3 +36,7 @@ repos:
 # https://github.com/arhat-dev/helm-charts
 - name: arhat-dev
   url: https://helm-charts.arhat.dev
+
+# https://github.com/enix/helm-charts
+- name: enix
+  url: https://charts.enix.io

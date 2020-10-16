@@ -1,0 +1,6 @@
+repos:
+- name: cilium
+  url: https://helm.cilium.io
+
+charts:
+- name: cilium/cilium@1.8.4

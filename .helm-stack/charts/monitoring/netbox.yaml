@@ -1,0 +1,7 @@
+repos:
+- name: bootc
+  url: https://charts.boo.tc
+
+charts:
+- name: bootc/netbox@2.3.0
+- name: enix/netbox@1.2.9
