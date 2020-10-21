@@ -4,5 +4,5 @@ repos:
   url: https://docs.renovatebot.com/helm-charts
 
 charts:
-- name: renovate/renovate@23.49.3
+- name: renovate/renovate@23.55.3
 - name: arhat-dev/renovate-server@0.1.3
