@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: harbor/harbor@1.5.0
-- name: bitnami/harbor@7.4.2
+- name: bitnami/harbor@7.4.3
