@@ -4,4 +4,4 @@ repos:
 
 charts:
 - name: gitlab/gitlab@4.4.4
-- name: gitlab/gitlab-runner@0.21.1
+- name: gitlab/gitlab-runner@0.22.0
