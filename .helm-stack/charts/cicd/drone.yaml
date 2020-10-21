@@ -1,0 +1,7 @@
+# https://github.com/drone/charts
+repos:
+- name: drone
+  url: https://charts.drone.io
+
+charts:
+- name: drone/drone@0.1.7

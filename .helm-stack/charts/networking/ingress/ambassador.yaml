@@ -1,0 +1,7 @@
+# https://github.com/datawire/ambassador-chart
+repos:
+- name: datawire
+  url: https://getambassador.io
+
+charts:
+- name: datawire/ambassador@6.5.10

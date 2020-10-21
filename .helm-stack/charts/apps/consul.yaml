@@ -1,0 +1,2 @@
+charts:
+- name: hashicorp/consul@0.25.0

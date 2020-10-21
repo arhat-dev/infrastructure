@@ -4,7 +4,9 @@
 
 Create service infrastructure on top of Kubernetes for all kinds of environment
 
-__NOTE:__ Chart dependencies in this repository are updated weekly according to the [renovate dashboard](https://github.com/arhat-dev/template-kubernetes-cluster/issues/20), please do not send pull request for chart upgrade.
+__NOTE:__ Chart dependencies in this repository are updated weekly according to the [renovate dashboard](https://github.com/arhat-dev/template-kubernetes-cluster/issues/20), please do not open pull request for chart upgrade.
+
+__NOTE:__ Helm charts from official `stable` and `incubator` repo are migrating, please consider add new charts with new repos, see [helm/charts#21103](https://github.com/helm/charts/issues/21103)
 
 ## Prerequisites
 

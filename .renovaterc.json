@@ -6,6 +6,9 @@
   "excludeCommitPaths": [".helm-stack.yaml"],
   "aliases": {
     "arhat-dev": "https://helm-charts.arhat.dev",
+    "hashicorp": "https://helm.releases.hashicorp.com",
+    "drone": "https://charts.drone.io",
+    "datawire": "https://getambassador.io",
     "enix": "https://charts.enix.io/",
     "cilium": "https://helm.cilium.io",
     "bootc": "https://charts.boo.tc",
@@ -52,7 +55,8 @@
     "k8s-at-home": "https://k8s-at-home.com/charts",
     "gabibbo97": "https://gabibbo97.github.io/charts",
     "bitnami": "https://charts.bitnami.com/bitnami",
-    "stable": "https://kubernetes-charts.storage.googleapis.com"
+    "stable": "https://charts.helm.sh/stable",
+    "incubator": "https://charts.helm.sh/incubator"
   },
   "regexManagers": [
     {
@@ -174,6 +178,33 @@
       "packagePatterns": ["^arhat-dev/"],
       "groupName": "arhat-dev",
       "registryUrls": ["https://helm-charts.arhat.dev"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^hashicorp/"],
+      "groupName": "hashicorp",
+      "registryUrls": ["https://helm.releases.hashicorp.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^drone/"],
+      "groupName": "drone",
+      "registryUrls": ["https://charts.drone.io"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^datawire/"],
+      "groupName": "datawire",
+      "registryUrls": ["https://getambassador.io"]
     },
     {
       "managers": ["regex"],
@@ -605,7 +636,16 @@
       "labels": ["charts"],
       "packagePatterns": ["^stable/"],
       "groupName": "stable",
-      "registryUrls": ["https://kubernetes-charts.storage.googleapis.com"]
+      "registryUrls": ["https://charts.helm.sh/stable"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^incubator/"],
+      "groupName": "incubator",
+      "registryUrls": ["https://charts.helm.sh/incubator"]
     }
   ]
 }
