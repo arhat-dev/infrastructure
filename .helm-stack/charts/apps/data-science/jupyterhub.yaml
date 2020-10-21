@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: jupyterhub/jupyterhub@0.9.1
-- name: jupyterhub/binderhub@0.2.0-n224.hf5cc56a
+- name: jupyterhub/binderhub@0.2.0-n242.h87e78af
