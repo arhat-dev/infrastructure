@@ -4,5 +4,5 @@ repos:
   url: https://grafana.github.io/helm-charts
 
 charts:
-- name: grafana/grafana@5.7.10
+- name: grafana/grafana@5.8.11
 - name: bitnami/grafana@3.4.4
