@@ -4,9 +4,9 @@ repos:
   url: https://helm.elastic.co
 
 charts:
-- name: elastic/elasticsearch@7.9.2
-- name: elastic/apm-server@7.9.2
-- name: elastic/filebeat@7.9.2
-- name: elastic/kibana@7.9.2
-- name: elastic/logstash@7.9.2
-- name: elastic/metricbeat@7.9.2
+- name: elastic/elasticsearch@7.9.3
+- name: elastic/apm-server@7.9.3
+- name: elastic/filebeat@7.9.3
+- name: elastic/kibana@7.9.3
+- name: elastic/logstash@7.9.3
+- name: elastic/metricbeat@7.9.3
