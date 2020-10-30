@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/odoo@14.0.21
+- name: bitnami/odoo@15.0.0
