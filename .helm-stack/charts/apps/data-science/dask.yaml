@@ -4,5 +4,5 @@ repos:
   url: https://helm.dask.org
 
 charts:
-- name: dask/dask@4.5.2
-- name: dask/daskhub@4.5.2
+- name: dask/dask@4.5.3
+- name: dask/daskhub@4.5.3
