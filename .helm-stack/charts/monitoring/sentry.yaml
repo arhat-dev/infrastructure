@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: sentry/sentry-kubernetes@0.3.1
-- name: stable/sentry@4.3.0
+- name: stable/sentry@4.3.1

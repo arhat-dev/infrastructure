@@ -4,5 +4,5 @@ repos:
   url: https://helm.goharbor.io
 
 charts:
-- name: harbor/harbor@1.5.0
-- name: bitnami/harbor@8.1.3
+- name: harbor/harbor@1.5.1
+- name: bitnami/harbor@8.1.4
