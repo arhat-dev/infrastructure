@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-node-exporter@1.11.2
+- name: prometheus-community/prometheus-node-exporter@1.12.0
