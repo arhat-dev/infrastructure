@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/zookeeper@5.22.1
+- name: bitnami/zookeeper@5.23.0
