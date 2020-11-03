@@ -28,3 +28,9 @@ jobs:
     - name: Validation
       run: |
         make check.all
+
+    # TODO: remove this test case once you have created a new repo from this repo
+    - name: Test sample cluster
+      run: |
+        sh scripts/helm-stack.sh -c .helm-stack -c docs/sample-cluster ensure
+        sh scripts/helm-stack.sh -c .helm-stack -c docs/sample-cluster gen all

@@ -1,9 +1,11 @@
 environments:
-- name: sample-development
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
-  - name: development/gitlab
-    chart: gitlab/gitlab@4.5.1
+  # gitlab chart contains the cert-manager, and the cert-manager chart requires email
+  # so ignored in this sample-cluster
+  # - name: development/gitlab
+  #   chart: gitlab/gitlab@4.5.1
 
   - name: development/renovate-server
     chart: arhat-dev/renovate-server@0.1.3

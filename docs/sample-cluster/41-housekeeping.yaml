@@ -1,5 +1,5 @@
 environments:
-- name: sample-housekeeping
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: housekeeping/openhab

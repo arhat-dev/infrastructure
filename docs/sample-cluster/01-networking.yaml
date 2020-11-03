@@ -1,5 +1,5 @@
 environments:
-- name: sample-networking
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: kube-system/coredns

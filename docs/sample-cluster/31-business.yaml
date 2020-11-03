@@ -1,5 +1,5 @@
 environments:
-- name: sample-business
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: business/odoo
@@ -11,8 +11,9 @@ environments:
   # - name: business/opendj
   #   chart:
 
-  - name: business/hydra
-    chart: ory/hydra@0.4.11
+  # hydra requires further config, so ignored in this sample-cluster
+  # - name: business/hydra
+  #   chart: ory/hydra@0.4.11
 
   - name: business/kratos
     chart: ory/kratos@0.4.11

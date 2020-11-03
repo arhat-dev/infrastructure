@@ -1,5 +1,5 @@
 environments:
-- name: sample-company
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   # - name: company/matterbridge

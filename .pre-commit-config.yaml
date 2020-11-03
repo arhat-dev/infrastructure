@@ -1,6 +1,7 @@
 exclude: |
   (?x)^(
-    clusters/.*/manifests/.*.yaml
+    clusters/.*/manifests/.*.yaml|
+    docs/images/.*
   )$
 
 repos:

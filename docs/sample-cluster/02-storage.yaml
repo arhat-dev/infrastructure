@@ -1,5 +1,5 @@
 environments:
-- name: sample-storage
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: storage/local-path-provisioner

@@ -1,5 +1,5 @@
 environments:
-- name: sample-monitoring
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: monitoring/prometheus-operator

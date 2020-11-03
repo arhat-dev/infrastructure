@@ -1,5 +1,5 @@
 environments:
-- name: sample-releasing
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: releasing/superset
@@ -7,7 +7,7 @@ environments:
 
   # - name: releasing/openproject
   #   chart:
-  
+
   - name: releasing/backstage
     chart: spotify/backstage@v0.1.1-alpha.26
 

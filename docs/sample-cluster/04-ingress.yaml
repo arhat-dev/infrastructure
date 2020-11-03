@@ -1,15 +1,17 @@
 environments:
-- name: sample-ingress
+- name: sample-cluster
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: ingress/contour
     chart: bitnami/contour@2.3.4
 
-  - name: ingress/oathkeeper
-    chart: ory/oathkeeper@0.4.11
+  # oathkeeper requires further config, so ignored in this sample-cluster
+  # - name: ingress/oathkeeper
+  #   chart: ory/oathkeeper@0.4.11
 
   - name: ingress/external-dns
     chart: bitnami/external-dns@3.5.1
 
-  - name: ingress/cert-manager
-    chart: jetstack/cert-manager@1.0.4
+  # cert-manager requires email, so ignored in this sample-cluster
+  # - name: ingress/cert-manager
+  #   chart: jetstack/cert-manager@1.0.4
