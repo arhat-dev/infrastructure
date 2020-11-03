@@ -1,5 +1,5 @@
 charts:
-- name: skywalking@v3.1.0
+- name: skywalking@v4.0.0
   git:
     url: https://github.com/apache/skywalking-kubernetes
     path: chart/skywalking
