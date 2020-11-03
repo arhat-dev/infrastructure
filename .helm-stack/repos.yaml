@@ -48,3 +48,7 @@ repos:
 # https://github.com/hashicorp/consul-helm
 - name: hashicorp
   url: https://helm.releases.hashicorp.com
+
+# https://github.com/kilip/helm-charts
+- name: kilip
+  url: https://charts.itstoni.com

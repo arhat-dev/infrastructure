@@ -1,2 +1,2 @@
 charts:
-- name: oteemocharts/sonarqube@9
+- name: oteemocharts/sonarqube@9.1.1

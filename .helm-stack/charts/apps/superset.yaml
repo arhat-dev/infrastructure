@@ -1,0 +1,2 @@
+charts:
+- name: stable/superset@1.1.11

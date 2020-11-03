@@ -1,0 +1,5 @@
+charts:
+- name: requarks/wiki@2.5.170
+  git:
+    url: https://github.com/Requarks/wiki
+    path: dev/helm

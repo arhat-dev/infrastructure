@@ -7,6 +7,7 @@
   "aliases": {
     "arhat-dev": "https://helm-charts.arhat.dev",
     "hashicorp": "https://helm.releases.hashicorp.com",
+    "kilip": "https://charts.itstoni.com",
     "drone": "https://charts.drone.io",
     "datawire": "https://getambassador.io",
     "enix": "https://charts.enix.io/",
@@ -187,6 +188,15 @@
       "packagePatterns": ["^hashicorp/"],
       "groupName": "hashicorp",
       "registryUrls": ["https://helm.releases.hashicorp.com"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^kilip/"],
+      "groupName": "kilip",
+      "registryUrls": ["https://charts.itstoni.com"]
     },
     {
       "managers": ["regex"],

@@ -1,0 +1,2 @@
+charts:
+- name: bitnami/discourse@1.0.1
