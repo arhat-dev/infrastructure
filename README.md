@@ -10,10 +10,10 @@ __NOTE:__ Helm charts from official `stable` and `incubator` repo are migrating,
 
 ## Prerequisites
 
-- `helm-stack` and `helm` binary installed to local PATH (or docker installed to run them in container with `make`)
+- (optional) `helm-stack` and `helm` binary installed to local PATH (or docker installed to run them in container with `make`)
   - To install `helm-stack`, run `GOOS=$(go env GOHOSTOS) GOARCH=$(go env GOHOSTARCH) go get -u arhat.dev/helm-stack/cmd/helm-stack`
   - To install `helm`, please refer to the [official guide](https://helm.sh/docs/intro/install/)
-- GNU `make` (optoinal if you know how to invoke `helm-stack` correctly)
+- (optional) GNU `make` (if you don't know how to invoke `helm-stack` correctly)
 
 ## Workflow
 

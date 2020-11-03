@@ -10,3 +10,6 @@
 
 # do not ignore temporary charts created locally
 !/charts/example-local-chart/latest
+
+# ignore sample clusters
+/clusters/sample*
