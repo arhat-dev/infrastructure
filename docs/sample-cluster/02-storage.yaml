@@ -16,7 +16,7 @@ environments:
     baseValues: values-crd.yaml
 
   - name: storage/redis
-    chart: bitnami/redis-cluster@3.2.11
+    chart: bitnami/redis-cluster@3.3.0
 
   - name: storage/zookeeper
     chart: bitnami/zookeeper@5.23.0

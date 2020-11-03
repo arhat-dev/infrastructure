@@ -9,7 +9,7 @@ environments:
   #   chart:
 
   - name: releasing/backstage
-    chart: spotify/backstage@v0.1.1-alpha.26
+    chart: backstage/backstage@v0.1.1
 
   # - name: releasing/notary
   #   chart:

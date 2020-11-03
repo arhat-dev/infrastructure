@@ -6,4 +6,4 @@ repos:
 charts:
 - name: nats/nats@0.6.2
 - name: nats/stan@0.6.2
-- name: bitnami/nats@4.5.7
+- name: bitnami/nats@4.5.8
