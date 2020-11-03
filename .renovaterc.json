@@ -81,7 +81,7 @@
       "versioningTemplate": "semver"
     },
     {
-      "fileMatch": ["docs/sample-cluster\\.yaml$"],
+      "fileMatch": ["docs/sample-cluster/.+.yaml$"],
       "matchStrings": [
         "- chart: (?<repoName>.*?)/(?<chartName>.*?)@(?<currentValue>.*?)\\s"
       ],
