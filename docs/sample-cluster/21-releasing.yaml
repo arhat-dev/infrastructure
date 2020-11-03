@@ -1,0 +1,21 @@
+environments:
+- name: sample-releasing
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: releasing/superset
+    chart: stable/superset@1.1.11
+
+  # - name: releasing/openproject
+  #   chart:
+  
+  - name: releasing/backstage
+    chart: spotify/backstage@v0.1.1-alpha.26
+
+  # - name: releasing/notary
+  #   chart:
+
+  - name: releasing/anchore
+    chart: anchore/anchore-engine@1.9.7
+
+  - name: releasing/nexus
+    chart: sonatype/nexus-repository-manager@28.1.1

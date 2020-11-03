@@ -95,7 +95,7 @@ Create a private repo using this template to avoid any credential leak.
    }
    ```
 
-1. Define your clusters (environments) in [`.helm-stack/clusters`](./.helm-stack/clusters) (You can start with a reference cluster config: [`docs/sample-cluster.yaml`](./docs/sample-cluster.yaml))
+1. Define your clusters (environments) in [`.helm-stack/clusters`](./.helm-stack/clusters) (You can start with a reference cluster config: [`docs/sample-cluster`](./docs/sample-cluster))
 
    ```yaml
    environments:

@@ -1,0 +1,21 @@
+environments:
+- name: sample-business
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: business/odoo
+    chart: bitnami/odoo@15.0.0
+
+  - name: business/bitwarden_rs
+    chart: k8s-at-home/bitwardenrs@1.0.0
+
+  # - name: business/opendj
+  #   chart:
+
+  - name: business/hydra
+    chart: ory/hydra@0.4.11
+
+  - name: business/kratos
+    chart: ory/kratos@0.4.11
+
+  - name: business/kratos-ui
+    chart: ory/kratos-selfservice-ui-node@0.4.11

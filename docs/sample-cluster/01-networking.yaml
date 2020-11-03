@@ -1,0 +1,12 @@
+environments:
+- name: sample-networking
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: kube-system/coredns
+    chart: stable/coredns@1.13.6
+
+  - name: networking/cilium
+    chart: cilium/cilium@1.8.5
+
+  - name: networking/kube-router
+    chart: enix/kube-router@1.1.2

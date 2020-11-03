@@ -1,0 +1,21 @@
+environments:
+- name: sample-monitoring
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: monitoring/prometheus-operator
+    chart: prometheus-community/kube-prometheus-stack@10.3.3
+
+  - name: monitoring/prometheus-adapter
+    chart: prometheus-community/prometheus-adapter@2.7.0
+
+  - name: monitoring/grafana
+    chart: grafana/grafana@6.0.1
+
+  - name: monitoring/fluentbit
+    chart: fluent/fluent-bit@0.7.3
+
+  - name: monitoring/keda
+    chart: kedacore/keda@2.0.0-rc2
+
+  # - name: monitoring/pg-realtime
+  #   chart:

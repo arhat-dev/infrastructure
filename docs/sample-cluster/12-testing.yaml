@@ -1,0 +1,27 @@
+environments:
+- name: sample-testing
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: testing/emqx
+    chart: emqx/emqx@v4.2.2
+
+  - name: testing/nats-server
+    chart: nats/nats@0.6.2
+
+  # - name: testing/kafka
+  #   chart: bitnami/kafka@11.8.8
+
+  # - name: testing/kind
+  #   chart:
+
+  - name: testing/elasticsearch
+    chart: elastic/elasticsearch@7.9.3
+
+  - name: testing/gitlab-runner
+    chart: gitlab/gitlab-runner@0.22.0
+
+  - name: testing/zookeeper
+    chart: bitnami/zookeeper@5.23.0
+
+  - name: testing/clickhouse
+    chart: mlohr/clickhouse@1.0.1

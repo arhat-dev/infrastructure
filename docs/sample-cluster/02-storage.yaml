@@ -1,0 +1,28 @@
+environments:
+- name: sample-storage
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: storage/local-path-provisioner
+    chart: rancher/local-path-provisioner@v0.0.18
+
+  - name: storage/linstor
+    chart: piraeusdatastore/piraeus-operator@v1.1.0
+
+  # - name: storage/iscsi-csi
+  #   chart:
+
+  - name: storage/postgres-operator
+    chart: zalando/postgres-operator@v1.5.0
+    baseValues: values-crd.yaml
+
+  - name: storage/redis
+    chart: bitnami/redis-cluster@3.2.11
+
+  - name: storage/zookeeper
+    chart: bitnami/zookeeper@5.23.0
+
+  - name: storage/kafka-operator
+    chart: strimzi/strimzi-kafka-operator@0.20.0
+
+  - name: storage/clickhouse
+    chart: mlohr/clickhouse@1.0.1

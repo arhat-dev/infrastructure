@@ -1,0 +1,21 @@
+environments:
+- name: sample-housekeeping
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: housekeeping/openhab
+    chart: kilip/openhab@1.0.3
+
+  - name: housekeeping/discourse
+    chart: bitnami/discourse@1.0.1
+
+  # - name: housekeeping/freeradius
+  #   chart:
+
+  - name: housekeeping/nodered
+    chart: k8s-at-home/node-red@3.1.0
+
+  # - name: housekeeping/motion
+  #   chart:
+
+  # - name: housekeeping/motioneye
+  #   chart:

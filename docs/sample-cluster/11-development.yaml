@@ -1,0 +1,12 @@
+environments:
+- name: sample-development
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  - name: development/gitlab
+    chart: gitlab/gitlab@4.5.1
+
+  - name: development/renovate-server
+    chart: arhat-dev/renovate-server@0.1.3
+
+  - name: development/sonarqube
+    chart: oteemocharts/sonarqube@9.1.1

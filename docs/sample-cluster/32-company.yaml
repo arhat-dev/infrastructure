@@ -1,0 +1,18 @@
+environments:
+- name: sample-company
+  kubeContext: sample-admin@sample-cluster
+  deployments:
+  # - name: company/matterbridge
+  #   chart:
+
+  # - name: company/listmonk
+  #   chart:
+
+  - name: company/mattermost
+    chart: mattermost/mattermost-team-edition@3.17.0
+
+  - name: company/wikijs
+    chart: requarks/wiki@2.5.170
+
+  # - name: company/rsshub
+  #   chart:
