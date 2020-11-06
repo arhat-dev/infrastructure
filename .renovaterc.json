@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", "github>arhat-dev/renovate-presets:general"],
+  "extends": ["github>arhat-dev/renovate-presets:general"],
   "enabledManagers": ["regex", "kubernetes"],
   "reviewers": [],
   "dependencyDashboardHeader": "This issue tracks chart version upgrades",
