@@ -9,13 +9,13 @@ environments:
   #   chart:
 
   - name: releasing/backstage
-    chart: backstage/backstage@v0.1.1
+    chart: backstage/backstage@v0.2.0
 
   # - name: releasing/notary
   #   chart:
 
   - name: releasing/anchore
-    chart: anchore/anchore-engine@1.9.7
+    chart: anchore/anchore-engine@1.10.0
 
   - name: releasing/nexus
     chart: sonatype/nexus-repository-manager@28.1.1
