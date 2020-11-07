@@ -4,4 +4,4 @@ repos:
   url: https://buildkite.github.io/charts
 
 charts:
-- name: buildkite/agent@0.4.6
+- name: buildkite/agent@0.4.7
