@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: minio/minio@8.0.2
-- name: bitnami/minio@3.7.18
+- name: bitnami/minio@3.7.19

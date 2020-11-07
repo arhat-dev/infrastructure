@@ -3,7 +3,7 @@ environments:
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: monitoring/prometheus-operator
-    chart: prometheus-community/kube-prometheus-stack@11.0.0
+    chart: prometheus-community/kube-prometheus-stack@11.0.4
 
   - name: monitoring/prometheus-adapter
     chart: prometheus-community/prometheus-adapter@2.7.0

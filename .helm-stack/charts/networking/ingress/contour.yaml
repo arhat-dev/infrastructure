@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/contour@2.3.4
+- name: bitnami/contour@2.3.5
