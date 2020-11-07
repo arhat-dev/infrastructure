@@ -6,7 +6,7 @@ environments:
     chart: emqx/emqx@v4.2.2
 
   - name: testing/nats-server
-    chart: nats/nats@0.7.0
+    chart: nats/nats@0.6.2
 
   # - name: testing/kafka
   #   chart: bitnami/kafka@11.8.9
