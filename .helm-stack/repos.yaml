@@ -41,6 +41,10 @@ repos:
 - name: arhat-dev
   url: https://helm-charts.arhat.dev
 
+# https://github.com/arhat-ext/helm-charts
+- name: arhat-ext
+  url: https://helm-charts.ext.arhat.dev
+
 # https://github.com/enix/helm-charts
 - name: enix
   url: https://charts.enix.io

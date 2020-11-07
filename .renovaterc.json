@@ -6,6 +6,7 @@
   "excludeCommitPaths": [".helm-stack.yaml"],
   "aliases": {
     "arhat-dev": "https://helm-charts.arhat.dev",
+    "arhat-ext": "https://helm-charts.ext.arhat.dev",
     "hashicorp": "https://helm.releases.hashicorp.com",
     "kilip": "https://charts.itstoni.com",
     "drone": "https://charts.drone.io",
@@ -179,6 +180,15 @@
       "packagePatterns": ["^arhat-dev/"],
       "groupName": "arhat-dev",
       "registryUrls": ["https://helm-charts.arhat.dev"]
+    },
+    {
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "semanticCommitScope": "charts",
+      "labels": ["charts"],
+      "packagePatterns": ["^arhat-ext/"],
+      "groupName": "arhat-ext",
+      "registryUrls": ["https://helm-charts.ext.arhat.dev"]
     },
     {
       "managers": ["regex"],
