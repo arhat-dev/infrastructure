@@ -4,4 +4,4 @@ repos:
   url: https://getambassador.io
 
 charts:
-- name: datawire/ambassador@6.5.11
+- name: datawire/ambassador@6.5.13
