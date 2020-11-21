@@ -21,7 +21,7 @@ environments:
     chart: gitlab/gitlab-runner@0.23.0
 
   - name: testing/zookeeper
-    chart: bitnami/zookeeper@5.23.0
+    chart: bitnami/zookeeper@6.0.0
 
   - name: testing/clickhouse
     chart: mlohr/clickhouse@1.0.1

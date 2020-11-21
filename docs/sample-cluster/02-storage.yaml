@@ -19,7 +19,7 @@ environments:
     chart: bitnami/redis-cluster@4.0.1
 
   - name: storage/zookeeper
-    chart: bitnami/zookeeper@5.23.0
+    chart: bitnami/zookeeper@6.0.0
 
   - name: storage/kafka-operator
     chart: strimzi/strimzi-kafka-operator@0.20.0
