@@ -1,2 +1,2 @@
 charts:
-- name: k8s-at-home/zwave2mqtt@4.0.0
+- name: k8s-at-home/zwave2mqtt@5.1.0
