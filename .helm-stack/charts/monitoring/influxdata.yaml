@@ -13,4 +13,4 @@ charts:
 - name: influxdata/telegraf-ds@1.0.18
 - name: influxdata/telegraf-operator@1.1.5
 
-- name: bitnami/influxdb@0.6.11
+- name: bitnami/influxdb@1.0.0
