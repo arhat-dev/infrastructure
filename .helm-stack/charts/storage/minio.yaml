@@ -4,5 +4,5 @@ repos:
   url: https://helm.min.io
 
 charts:
-- name: minio/minio@8.0.2
+- name: minio/minio@8.0.3
 - name: bitnami/minio@3.7.19
