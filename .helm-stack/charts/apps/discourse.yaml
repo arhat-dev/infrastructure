@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/discourse@1.0.1
+- name: bitnami/discourse@2.0.0

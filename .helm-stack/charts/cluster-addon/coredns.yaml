@@ -1,2 +1,2 @@
 charts:
-- name: stable/coredns@1.13.6
+- name: stable/coredns@1.13.8

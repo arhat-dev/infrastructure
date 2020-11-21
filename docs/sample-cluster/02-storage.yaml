@@ -6,7 +6,7 @@ environments:
     chart: rancher/local-path-provisioner@v0.0.18
 
   - name: storage/linstor
-    chart: piraeusdatastore/piraeus-operator@v1.1.0
+    chart: piraeusdatastore/piraeus-operator@v1.2.0
 
   # - name: storage/iscsi-csi
   #   chart:

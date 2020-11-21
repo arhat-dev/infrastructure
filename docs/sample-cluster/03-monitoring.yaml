@@ -3,16 +3,16 @@ environments:
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: monitoring/prometheus-operator
-    chart: prometheus-community/kube-prometheus-stack@11.0.4
+    chart: prometheus-community/kube-prometheus-stack@11.1.7
 
   - name: monitoring/prometheus-adapter
-    chart: prometheus-community/prometheus-adapter@2.7.0
+    chart: prometheus-community/prometheus-adapter@2.7.1
 
   - name: monitoring/grafana
-    chart: grafana/grafana@6.1.3
+    chart: grafana/grafana@6.1.8
 
   - name: monitoring/fluentbit
-    chart: fluent/fluent-bit@0.7.4
+    chart: fluent/fluent-bit@0.7.5
 
   - name: monitoring/keda
     chart: kedacore/keda@2.0.0

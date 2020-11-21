@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: fluent/fluentd@0.1.4
-- name: fluent/fluent-bit@0.7.4
+- name: fluent/fluent-bit@0.7.5

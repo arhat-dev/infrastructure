@@ -3,19 +3,19 @@ environments:
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: releasing/superset
-    chart: stable/superset@1.1.11
+    chart: stable/superset@1.1.13
 
   # - name: releasing/openproject
   #   chart:
 
   - name: releasing/backstage
-    chart: backstage/backstage@v0.2.0
+    chart: backstage/backstage@v0.3.1
 
   # - name: releasing/notary
   #   chart:
 
   - name: releasing/anchore
-    chart: anchore/anchore-engine@1.10.0
+    chart: anchore/anchore-engine@1.10.3
 
   - name: releasing/nexus
-    chart: sonatype/nexus-repository-manager@28.1.1
+    chart: sonatype/nexus-repository-manager@28.1.3

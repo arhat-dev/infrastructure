@@ -1,5 +1,5 @@
 charts:
-- name: piraeusdatastore/piraeus-operator@v1.1.0
+- name: piraeusdatastore/piraeus-operator@v1.2.0
   git:
     url: https://github.com/piraeusdatastore/piraeus-operator
     path: charts/piraeus
