@@ -4,5 +4,5 @@ repos:
   url: https://jupyterhub.github.io/helm-chart
 
 charts:
-- name: jupyterhub/jupyterhub@0.10.2
-- name: jupyterhub/binderhub@0.2.0-n361.h6f57706
+- name: jupyterhub/jupyterhub@0.10.3
+- name: jupyterhub/binderhub@0.2.0-n412.h1f1f0c4
