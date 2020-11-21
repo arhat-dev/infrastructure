@@ -9,7 +9,7 @@ environments:
     chart: nats/nats@0.7.2
 
   # - name: testing/kafka
-  #   chart: bitnami/kafka@11.8.9
+  #   chart: bitnami/kafka@12.1.0
 
   # - name: testing/kind
   #   chart:

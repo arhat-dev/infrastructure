@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: strimzi/strimzi-kafka-operator@0.20.0
-- name: bitnami/kafka@11.8.9
+- name: bitnami/kafka@12.1.0
