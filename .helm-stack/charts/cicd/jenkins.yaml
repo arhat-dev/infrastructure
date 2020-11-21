@@ -4,4 +4,4 @@ repos:
   url: https://charts.jenkins.io
 
 charts:
-- name: jenkins/jenkins@2.17.0
+- name: jenkins/jenkins@2.19.0
