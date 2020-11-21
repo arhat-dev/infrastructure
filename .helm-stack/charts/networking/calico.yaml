@@ -1,3 +1,3 @@
 charts:
-- name: arhat-dev/calico@0.1.2
-- name: arhat-dev/calico-node@0.1.2
+- name: arhat-dev/calico@0.1.4
+- name: arhat-dev/calico-node@0.1.4
