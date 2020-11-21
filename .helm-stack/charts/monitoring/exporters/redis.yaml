@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-redis-exporter@3.6.0
+- name: prometheus-community/prometheus-redis-exporter@3.7.0

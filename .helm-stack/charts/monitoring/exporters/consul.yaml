@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-consul-exporter@0.2.0
+- name: prometheus-community/prometheus-consul-exporter@0.3.0
