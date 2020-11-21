@@ -8,4 +8,4 @@ charts:
 - name: prometheus-community/prometheus-adapter@2.7.1
 - name: prometheus-community/prometheus-pushgateway@1.5.0
 
-- name: bitnami/kube-prometheus@2.2.3
+- name: bitnami/kube-prometheus@2.2.4
