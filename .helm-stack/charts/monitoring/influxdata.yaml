@@ -10,7 +10,7 @@ charts:
 - name: influxdata/chronograf@1.1.19
 - name: influxdata/kapacitor@1.3.1
 - name: influxdata/telegraf@1.7.32
-- name: influxdata/telegraf-ds@1.0.18
+- name: influxdata/telegraf-ds@1.0.19
 - name: influxdata/telegraf-operator@1.1.5
 
 - name: bitnami/influxdb@1.0.0
