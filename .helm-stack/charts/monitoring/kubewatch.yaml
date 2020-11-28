@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/kubewatch@2.0.0
+- name: bitnami/kubewatch@3.0.0

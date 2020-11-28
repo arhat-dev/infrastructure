@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: astronomer/airflow@0.18.4
-- name: bitnami/airflow@6.7.2
+- name: bitnami/airflow@7.0.3
