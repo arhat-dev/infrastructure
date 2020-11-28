@@ -4,4 +4,4 @@ repos:
   url: https://concourse-charts.storage.googleapis.com
 
 charts:
-- name: concourse/concourse@14.2.0
+- name: concourse/concourse@14.4.0
