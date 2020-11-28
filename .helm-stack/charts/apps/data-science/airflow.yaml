@@ -4,5 +4,5 @@ repos:
   url: https://helm.astronomer.io
 
 charts:
-- name: astronomer/airflow@0.18.2
+- name: astronomer/airflow@0.18.4
 - name: bitnami/airflow@6.7.2
