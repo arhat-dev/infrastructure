@@ -1,2 +1,2 @@
 charts:
-- name: k8s-at-home/unifi-poller@3.0.0
+- name: k8s-at-home/unifi-poller@3.3.0
