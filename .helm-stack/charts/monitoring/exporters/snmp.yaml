@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-snmp-exporter@0.0.6
+- name: prometheus-community/prometheus-snmp-exporter@0.1.1

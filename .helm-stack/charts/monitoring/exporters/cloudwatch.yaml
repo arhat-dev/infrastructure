@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-cloudwatch-exporter@0.10.1
+- name: prometheus-community/prometheus-cloudwatch-exporter@0.12.0
