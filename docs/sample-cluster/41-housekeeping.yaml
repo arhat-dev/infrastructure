@@ -6,7 +6,7 @@ environments:
     chart: kilip/openhab@1.0.3
 
   - name: housekeeping/discourse
-    chart: bitnami/discourse@2.0.0
+    chart: bitnami/discourse@2.2.1
 
   # - name: housekeeping/freeradius
   #   chart:

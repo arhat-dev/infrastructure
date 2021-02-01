@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/external-dns@4.0.0
+- name: bitnami/external-dns@4.6.0

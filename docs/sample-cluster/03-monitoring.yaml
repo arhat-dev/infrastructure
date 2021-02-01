@@ -12,7 +12,7 @@ environments:
     chart: grafana/grafana@6.2.1
 
   - name: monitoring/fluentbit
-    chart: fluent/fluent-bit@0.7.5
+    chart: fluent/fluent-bit@0.10.0
 
   - name: monitoring/keda
     chart: kedacore/keda@2.1.1

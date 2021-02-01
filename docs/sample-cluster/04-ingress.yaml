@@ -10,7 +10,7 @@ environments:
   #   chart: ory/oathkeeper@0.4.11
 
   - name: ingress/external-dns
-    chart: bitnami/external-dns@4.0.0
+    chart: bitnami/external-dns@4.6.0
 
   # cert-manager requires email, so ignored in this sample-cluster
   # - name: ingress/cert-manager
