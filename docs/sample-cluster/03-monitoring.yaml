@@ -9,13 +9,13 @@ environments:
     chart: prometheus-community/prometheus-adapter@2.7.1
 
   - name: monitoring/grafana
-    chart: grafana/grafana@6.1.8
+    chart: grafana/grafana@6.2.1
 
   - name: monitoring/fluentbit
     chart: fluent/fluent-bit@0.7.5
 
   - name: monitoring/keda
-    chart: kedacore/keda@2.0.0
+    chart: kedacore/keda@2.1.1
 
   # - name: monitoring/pg-realtime
   #   chart:

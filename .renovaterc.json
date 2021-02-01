@@ -231,9 +231,9 @@
       "datasources": ["helm"],
       "semanticCommitScope": "charts",
       "labels": ["charts"],
-      "packagePatterns": ["^mlohr/"],
-      "groupName": "mlohr",
-      "registryUrls": ["https://helm-charts.mlohr.com"]
+      "packagePatterns": ["^liwenhe"],
+      "groupName": "liwenhe",
+      "registryUrls": ["https://liwenhe1993.github.io/charts/"]
     },
     {
       "managers": ["regex"],

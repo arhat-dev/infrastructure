@@ -14,4 +14,4 @@ environments:
 
   # cert-manager requires email, so ignored in this sample-cluster
   # - name: ingress/cert-manager
-  #   chart: jetstack/cert-manager@1.0.4
+  #   chart: jetstack/cert-manager@1.1.0

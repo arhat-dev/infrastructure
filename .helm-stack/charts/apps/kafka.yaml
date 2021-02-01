@@ -4,5 +4,5 @@ repos:
   url: https://strimzi.io/charts
 
 charts:
-- name: strimzi/strimzi-kafka-operator@0.20.0
+- name: strimzi/strimzi-kafka-operator@0.21.1
 - name: bitnami/kafka@12.1.0

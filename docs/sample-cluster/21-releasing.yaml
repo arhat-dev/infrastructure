@@ -18,4 +18,4 @@ environments:
     chart: anchore/anchore-engine@1.10.3
 
   - name: releasing/nexus
-    chart: sonatype/nexus-repository-manager@28.1.3
+    chart: sonatype/nexus-repository-manager@29.1.0

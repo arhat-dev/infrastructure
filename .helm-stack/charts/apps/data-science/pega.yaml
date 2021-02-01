@@ -4,5 +4,5 @@ repos:
   url: https://dl.bintray.com/pegasystems/pega-helm-charts
 
 charts:
-- name: pega/pega@1.3.4
-- name: pega/addons@1.3.4
+- name: pega/pega@1.4.1
+- name: pega/addons@1.4.1
