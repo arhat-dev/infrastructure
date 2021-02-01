@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: grafana/grafana@6.2.1
-- name: bitnami/grafana@4.0.2
+- name: bitnami/grafana@5.1.0
