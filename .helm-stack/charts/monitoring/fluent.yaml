@@ -4,5 +4,5 @@ repos:
   url: https://fluent.github.io/helm-charts
 
 charts:
-- name: fluent/fluentd@0.1.4
+- name: fluent/fluentd@0.2.0
 - name: fluent/fluent-bit@0.10.0
