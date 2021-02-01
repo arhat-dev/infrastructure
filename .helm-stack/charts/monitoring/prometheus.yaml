@@ -6,6 +6,6 @@ repos:
 charts:
 - name: prometheus-community/kube-prometheus-stack@13.4.1
 - name: prometheus-community/prometheus-adapter@2.11.0
-- name: prometheus-community/prometheus-pushgateway@1.5.0
+- name: prometheus-community/prometheus-pushgateway@1.5.1
 
 - name: bitnami/kube-prometheus@3.0.1

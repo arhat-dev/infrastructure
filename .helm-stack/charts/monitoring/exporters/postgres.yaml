@@ -1,2 +1,2 @@
 charts:
-- name: prometheus-community/prometheus-postgres-exporter@1.4.0
+- name: prometheus-community/prometheus-postgres-exporter@1.9.0
