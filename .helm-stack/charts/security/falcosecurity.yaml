@@ -4,6 +4,6 @@ repos:
   url: https://falcosecurity.github.io/charts
 
 charts:
-- name: falcosecurity/falco@1.5.5
-- name: falcosecurity/falco-exporter@0.4.1
-- name: falcosecurity/falcosidekick@0.1.33
+- name: falcosecurity/falco@1.7.2
+- name: falcosecurity/falco-exporter@0.5.0
+- name: falcosecurity/falcosidekick@0.2.2
