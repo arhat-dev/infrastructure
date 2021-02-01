@@ -4,8 +4,8 @@ repos:
   url: https://argoproj.github.io/argo-helm
 
 charts:
-- name: argo/argo@0.13.8
-- name: argo/argo-cd@2.10.0
+- name: argo/argo@0.15.3
+- name: argo/argo-cd@2.11.6
 - name: argo/argocd-notifications@1.0.11
 - name: argo/argo-ci@0.1.7
 - name: argo/argo-events@1.0.0
