@@ -4,4 +4,4 @@ repos:
   url: https://haproxytech.github.io/helm-charts
 
 charts:
-- name: haproxytech/kubernetes-ingress@1.8.2
+- name: haproxytech/kubernetes-ingress@1.12.0

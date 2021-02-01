@@ -1,5 +1,5 @@
 charts:
-- name: backstage/backstage@v0.3.1
+- name: backstage/backstage@v0.4.3
   git:
     url: https://github.com/backstage/backstage
     path: contrib/kubernetes/basic_kubernetes_example_with_helm/backstage

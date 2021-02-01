@@ -11,4 +11,4 @@ environments:
     chart: arhat-dev/renovate-server@0.1.4
 
   - name: development/sonarqube
-    chart: oteemocharts/sonarqube@9.2.2
+    chart: oteemocharts/sonarqube@9.2.7

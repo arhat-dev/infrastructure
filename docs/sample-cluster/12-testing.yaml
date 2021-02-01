@@ -3,7 +3,7 @@ environments:
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: testing/emqx
-    chart: emqx/emqx@v4.2.3
+    chart: emqx/emqx@v4.2.7
 
   - name: testing/nats-server
     chart: nats/nats@0.7.2
@@ -15,7 +15,7 @@ environments:
   #   chart:
 
   - name: testing/elasticsearch
-    chart: elastic/elasticsearch@7.9.3
+    chart: elastic/elasticsearch@7.10.2
 
   - name: testing/gitlab-runner
     chart: gitlab/gitlab-runner@0.23.0
@@ -24,4 +24,4 @@ environments:
     chart: bitnami/zookeeper@6.0.0
 
   - name: testing/clickhouse
-    chart: mlohr/clickhouse@1.0.1
+    chart: liwenhe/clickhouse@1.0.1

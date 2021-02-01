@@ -3,10 +3,10 @@ environments:
   kubeContext: sample-admin@sample-cluster
   deployments:
   - name: business/odoo
-    chart: bitnami/odoo@17.0.0
+    chart: bitnami/odoo@18.2.0
 
   - name: business/bitwarden_rs
-    chart: k8s-at-home/bitwardenrs@1.0.0
+    chart: k8s-at-home/bitwardenrs@2.0.0
 
   # - name: business/opendj
   #   chart:

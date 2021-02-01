@@ -4,7 +4,7 @@ repos:
   url: https://k8s.ory.sh/helm/charts
 
 charts:
-- name: ory/hydra@0.4.11
-- name: ory/kratos@0.4.11
-- name: ory/oathkeeper@0.4.11
-- name: ory/kratos-selfservice-ui-node@0.4.11
+- name: ory/hydra@0.5.2
+- name: ory/kratos@0.5.2
+- name: ory/oathkeeper@0.5.2
+- name: ory/kratos-selfservice-ui-node@0.5.2

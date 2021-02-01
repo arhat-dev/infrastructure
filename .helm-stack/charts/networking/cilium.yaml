@@ -4,4 +4,4 @@ repos:
   url: https://helm.cilium.io
 
 charts:
-- name: cilium/cilium@1.9.0
+- name: cilium/cilium@1.9.3

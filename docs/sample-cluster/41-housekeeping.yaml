@@ -12,7 +12,7 @@ environments:
   #   chart:
 
   - name: housekeeping/nodered
-    chart: k8s-at-home/node-red@4.0.0
+    chart: k8s-at-home/node-red@5.3.1
 
   # - name: housekeeping/motion
   #   chart:
