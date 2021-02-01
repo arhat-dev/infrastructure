@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: ingress-nginx/ingress-nginx@3.22.0
-- name: bitnami/nginx-ingress-controller@7.3.0
+- name: bitnami/nginx-ingress-controller@7.3.1

@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: kong/kong@1.14.2
-- name: bitnami/kong@3.0.0
+- name: bitnami/kong@3.4.0
