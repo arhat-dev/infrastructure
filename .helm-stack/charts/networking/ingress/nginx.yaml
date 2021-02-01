@@ -4,5 +4,5 @@ repos:
   url: https://kubernetes.github.io/ingress-nginx
 
 charts:
-- name: ingress-nginx/ingress-nginx@3.12.0
-- name: bitnami/nginx-ingress-controller@6.0.0
+- name: ingress-nginx/ingress-nginx@3.22.0
+- name: bitnami/nginx-ingress-controller@7.3.0

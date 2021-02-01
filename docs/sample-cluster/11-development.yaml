@@ -5,10 +5,10 @@ environments:
   # gitlab chart contains the cert-manager, and the cert-manager chart requires email
   # so ignored in this sample-cluster
   # - name: development/gitlab
-  #   chart: gitlab/gitlab@4.5.4
+  #   chart: gitlab/gitlab@4.8.1
 
   - name: development/renovate-server
     chart: arhat-dev/renovate-server@0.1.4
 
   - name: development/sonarqube
-    chart: oteemocharts/sonarqube@9.2.2
+    chart: oteemocharts/sonarqube@9.2.7

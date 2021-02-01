@@ -1,5 +1,5 @@
 charts:
-- name: rancher/local-path-provisioner@v0.0.18
+- name: rancher/local-path-provisioner@v0.0.19
   git:
     url: https://github.com/rancher/local-path-provisioner
     path: deploy/chart

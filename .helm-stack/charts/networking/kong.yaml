@@ -4,5 +4,5 @@ repos:
   url: https://charts.konghq.com
 
 charts:
-- name: kong/kong@1.12.0
+- name: kong/kong@1.14.2
 - name: bitnami/kong@3.0.0

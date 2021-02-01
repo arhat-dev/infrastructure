@@ -1,6 +1,6 @@
 repos:
-- name: mlohr
-  url: https://helm-charts.mlohr.com
+- name: liwenhe
+  url: https://liwenhe1993.github.io/charts/
 
 charts:
-- name: mlohr/clickhouse@1.0.1
+- name: liwenhe/clickhouse@1.0.1

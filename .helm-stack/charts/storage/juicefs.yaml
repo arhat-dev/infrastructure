@@ -1,0 +1,5 @@
+charts:
+- name: juicedata/juicefs-csi-driver@master
+  git:
+    url: https://github.com/juicedata/juicefs-csi-driver
+    path: deploy/chart

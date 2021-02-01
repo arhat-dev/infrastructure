@@ -6,7 +6,7 @@ environments:
     chart: stable/coredns@1.13.8
 
   - name: networking/cilium
-    chart: cilium/cilium@1.9.0
+    chart: cilium/cilium@1.9.3
 
   - name: networking/kube-router
     chart: enix/kube-router@1.1.2

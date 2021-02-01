@@ -9,7 +9,7 @@ environments:
   #   chart:
 
   - name: company/mattermost
-    chart: mattermost/mattermost-team-edition@3.19.0
+    chart: mattermost/mattermost-team-edition@3.21.0
 
   - name: company/wikijs
     chart: requarks/wiki@2.5.170

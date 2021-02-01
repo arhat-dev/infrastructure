@@ -1,2 +1,2 @@
 charts:
-- name: bitnami/metallb@1.0.1
+- name: bitnami/metallb@2.2.0
