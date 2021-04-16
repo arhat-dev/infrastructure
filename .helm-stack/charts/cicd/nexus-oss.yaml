@@ -5,4 +5,4 @@ repos:
 
 charts:
 - name: sonatype/nexus-repository-manager@29.1.0
-- name: sonatype/nexus-iq-server@103.0.1
+- name: sonatype/nexus-iq-server@111.0.0
